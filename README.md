@@ -7,7 +7,7 @@
 
 `git remote add peixuan https://github.com/bphsuan/Immersive.git`
 
-`git remote -v` <span>確認是否有bphsuan</span>
+`git remote -v` <span>確認是否有peixuan這個remote</span>
 
 `git checkout -b newBranch` <span>創新分支</span>
 

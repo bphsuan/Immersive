@@ -9,4 +9,4 @@
 
 `git remote -v` <span>確認是否有bphsuan</span>
 
-`git checkout -b master newBranch` <span>創新分支</span>
+`git checkout -b newBranch` <span>創新分支</span>

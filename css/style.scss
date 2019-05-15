@@ -14,3 +14,25 @@ $shadow: 3px 3px 3px #ccc;
     text-decoration: none;
   }
 }
+
+.container {
+  width: 100vw;
+  overflow: hidden;
+  .header {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    ul {
+      width: 5000px;
+      li {
+        display: inline-block;
+        float: left;
+        list-style: none;
+        img {
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+    }
+  }
+}

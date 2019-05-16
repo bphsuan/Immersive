@@ -29,15 +29,25 @@
     width: 100vw;
     height: 90vh; }
     .container .earth div {
-      width: 50vw;
+      width: 34vw;
       margin: 0 auto; }
     .container .earth embed {
-      width: 43vw;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      width: 32vw;
       height: auto;
       -webkit-animation: earth-Rotate 2.5s infinite linear;
       -moz-animation: earth-Rotate 2.5s infinite linear;
       -o-animation: earth-Rotate 2.5s infinite linear;
       animation: earth-Rotate 2.5s infinite linear; }
+      .container .earth embed:hover {
+        -webkit-animation: earth-Rotate 1s infinite linear;
+        animation: earth-Rotate 1s infinite linear; }
+    .container .earth .start {
+      text-align: center;
+      color: #FFFFFF;
+      -webkit-animation: start 1s infinite;
+      animation: start 1s infinite; }
 
 @-webkit-keyframes earth-Rotate {
   from {
@@ -52,3 +62,25 @@
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
+@-webkit-keyframes start {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  50% {
+    -webkit-transform: translate(0px, -10px);
+    transform: translate(0px, -10px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }
+
+@keyframes start {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); }
+  50% {
+    -webkit-transform: translate(0px, -10px);
+    transform: translate(0px, -10px); }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px); } }

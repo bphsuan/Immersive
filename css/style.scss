@@ -43,19 +43,31 @@ $shadow: 3px 3px 3px #ccc;
     width: 100vw;
     height: 90vh;
     div{
-      width: 50vw;
+      width: 34vw;
       margin: 0 auto;
     }
     embed{ 
-      width: 43vw;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      width: 32vw;
       height: auto;
       -webkit-animation: earth-Rotate 2.5s infinite linear;
       -moz-animation: earth-Rotate 2.5s infinite linear;
       -o-animation: earth-Rotate 2.5s infinite linear;
       animation: earth-Rotate 2.5s infinite linear;
+    &:hover{
+      animation: earth-Rotate 1s infinite linear;
+    }
+    }
+    .start{
+     text-align: center;
+      color: #FFFFFF;
+      animation: start 1s infinite;
     }
   }
+  
 }
+
 @-webkit-keyframes earth-Rotate {
   from {
     -webkit-transform: rotate(0deg);
@@ -71,4 +83,15 @@ $shadow: 3px 3px 3px #ccc;
   to {
     transform: rotate(360deg);
   }
+}
+@keyframes start { 
+  0% {             
+      transform: translate(0px, 0px);            
+   }            
+   50% {                
+      transform: translate(0px, -10px);            
+   }            
+   100% {                
+      transform: translate(0px, 0px);
+   }
 }

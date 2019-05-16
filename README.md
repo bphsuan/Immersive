@@ -15,7 +15,7 @@
 
 <p>專案push</p>
 
-`git add .`
+`git add .`  <span>（p.s 如出現LF will be replaced by CRLF in Gemfile.的Error 可下 `git config core.autocrlf true` 再add一次 ）</span>
 
 `git commit -m "註解"`
 
@@ -28,3 +28,4 @@
 <p>專案更新</p>
 
 `git pull peixuan master`
+

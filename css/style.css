@@ -13,7 +13,9 @@
     height: 100vh;
     overflow: hidden; }
     .container .header ul {
-      width: 5000px; }
+      width: 5000px;
+      position: absolute;
+      z-index: 0; }
       .container .header ul li {
         display: inline-block;
         float: left;
@@ -21,3 +23,32 @@
         .container .header ul li img {
           width: 100vw;
           height: 100vh; }
+  .container .earth {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 90vh; }
+    .container .earth div {
+      width: 50vw;
+      margin: 0 auto; }
+    .container .earth embed {
+      width: 43vw;
+      height: auto;
+      -webkit-animation: earth-Rotate 2.5s infinite linear;
+      -moz-animation: earth-Rotate 2.5s infinite linear;
+      -o-animation: earth-Rotate 2.5s infinite linear;
+      animation: earth-Rotate 2.5s infinite linear; }
+
+@-webkit-keyframes earth-Rotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes earth-Rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }

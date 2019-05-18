@@ -1,6 +1,6 @@
 var total = $('.header ul li').length;
 var current = 1;
-var windows_width = screen.width;
+var windows_width = window.innerWidth;
 displaypic(current);
 function displaypic(pic) {
     if (current < total) {

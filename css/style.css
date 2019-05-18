@@ -21,3 +21,43 @@
         .container .header ul li img {
           width: 100vw;
           height: 100vh; }
+  .container .content {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+    .container .content .menu {
+      width: 10%;
+      height: 100vh;
+      padding: 5%;
+      float: left;
+      border-right: 2px solid #d0d0d0; }
+      .container .content .menu h3 {
+        margin-top: 5%; }
+        .container .content .menu h3 i {
+          margin-right: 10%;
+          font-size: 15px; }
+      .container .content .menu ul {
+        margin-left: 10%; }
+        .container .content .menu ul li {
+          margin-top: 5%;
+          margin-left: 15%;
+          list-style: none; }
+          .container .content .menu ul li i {
+            margin-right: 10%;
+            font-size: 5px; }
+    .container .content .topic {
+      width: 75%;
+      height: 100vh;
+      float: left; }
+      .container .content .topic .title {
+        margin: 0 auto;
+        margin-top: 5%;
+        width: 35%; }
+        .container .content .topic .title .tit {
+          font-size: 30px;
+          padding-bottom: 2%;
+          border-bottom: 3px solid #2828ff; }
+        .container .content .topic .title .sub {
+          font-size: 20px;
+          padding-top: 2%;
+          float: right; }

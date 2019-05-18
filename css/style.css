@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -101,7 +100,7 @@
         float: right; }
     .content .topic .topic_section {
       position: relative;
-      width: 95%;
+      width: 100%;
       height: 100vh; }
       .content .topic .topic_section .topic_pic {
         position: absolute;
@@ -119,12 +118,7 @@
         height: 100vw;
         padding-right: 5vw;
         padding-top: 20vh;
-        opacity: 0;
-        animation: fade-in ease 2s 1;
-        -webkit-animation: fade-in ease 2s 1;
-        /*結束狀態*/
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards; }
+        opacity: 0; }
         .content .topic .topic_section .topic_content p {
           margin-bottom: 5%; }
         .content .topic .topic_section .topic_content .topic_title {
@@ -133,6 +127,8 @@
           font-size: 23px;
           font-weight: 800;
           color: #004aaf; }
+        .content .topic .topic_section .topic_content .topic_text {
+          padding-right: 30%; }
         .content .topic .topic_section .topic_content .topic_btn {
           border-radius: 20px;
           background-color: #004aaf;

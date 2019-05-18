@@ -61,33 +61,44 @@ $shadow: 3px 3px 3px #ccc;
       text-align: center;
        color: #FFFFFF;
        animation: start 1s infinite;
+       .start_text{
+         color: #FFFFFF;
+       }
      }
   }
 }
 .content {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   overflow: hidden;
   .menu {      
     width: 10%;
     height: 100vh;
-    padding: 5%;
+    padding: 5% 3% 5% 5%;
     float: left;
-    border-right: 2px solid #d0d0d0;
-    h3{
-      margin-top: 5%;
-      i{
-        margin-right: 10%;
-        font-size: 15px;
+    ul {
+
+      font-weight: 700;
+      a{
+        color: #9d9d9d;
       }
-    }
-    ul{
-      margin-left: 10%;
-      li{
+      .big {   
+        color: #9d9d9d;    
+        font-size: 20px;
+        list-style: none;
+        margin-top: 5%;
+        i {
+          margin-right: 10%;
+          font-size: 15px;
+        }
+      }
+      .small {
+        color: #9d9d9d;
+        list-style: none;
         margin-top: 5%;
         margin-left: 15%;
         list-style: none;
-        i{
+        i {
           margin-right: 10%;
           font-size: 5px;
         }
@@ -95,12 +106,15 @@ $shadow: 3px 3px 3px #ccc;
     }
   }
   .topic{
-    width: 75%;
-    height: 100vh;
-    float: left;
+    width: 80%;
+    height: 200vh;
+    position: absolute;
+    right: 0;
+    border-left: 2px solid #d0d0d0;
     .title{
       margin: 0 auto;
       margin-top: 5%;
+      margin-bottom: 5%;
       width: 35%;
       .tit{
         font-size: 30px;
@@ -111,6 +125,57 @@ $shadow: 3px 3px 3px #ccc;
         font-size: 20px;
         padding-top: 2%;
         float: right;
+      }
+    }
+    .topic_section{
+      position: relative;
+      width: 95%;
+      height: 100vh;
+      .topic_pic{
+        position: absolute;
+        width: 50%;
+        height: 100vh;
+        div{
+          width: 80%;
+         margin: 0 auto;
+         padding-top:20vh;
+         vertical-align: middle;
+        }
+      }
+      
+      .topic_content{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100vw;;
+        padding-right: 5vw;
+        padding-top: 20vh;
+        opacity: 0;    
+    animation: fade-in ease 2s 1;
+    -webkit-animation: fade-in ease 2s 1;
+   
+    /*結束狀態*/
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;  
+        p{
+          margin-bottom: 5%;
+        }
+        .topic_title{
+          font-size: 20px;
+        }
+        .topic_title_big{
+          font-size: 23px;
+          font-weight: 800;
+          color: #004aaf;
+        }
+        .topic_btn{
+          border-radius: 20px;
+          background-color: #004aaf;
+          color: #FFFFFF;
+          font-size: 20px;
+          padding: 2% 4% 2% 4%;
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -141,4 +206,25 @@ $shadow: 3px 3px 3px #ccc;
    100% {                
       transform: translate(0px, 0px);
    }
+}
+@keyframes color{
+  from {color:#9d9d9d;}
+  to {color:#2828ff;}
+}
+@-moz-keyframes color{
+  from {color:#9d9d9d;}
+  to {color:#2828ff;}
+}
+@-webkit-keyframes color{
+  from {color:#9d9d9d;}
+  to {color:#2828ff;}
+}
+
+@keyframes fade-in{  
+  0%{ opacity: 0;}
+  100%{opacity:1;}
+}
+@-webkit-keyframes fade-in{
+  0%{ opacity: 0;}
+  100%{opacity:1;}
 }

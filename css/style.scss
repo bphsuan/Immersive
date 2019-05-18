@@ -24,8 +24,6 @@ $shadow: 3px 3px 3px #ccc;
     overflow: hidden;
     ul {
       width: 5000px;
-      position: absolute;
-      z-index: 0;
       li {
         display: inline-block;
         float: left;
@@ -55,19 +53,68 @@ $shadow: 3px 3px 3px #ccc;
       -moz-animation: earth-Rotate 2.5s infinite linear;
       -o-animation: earth-Rotate 2.5s infinite linear;
       animation: earth-Rotate 2.5s infinite linear;
-    &:hover{
-      animation: earth-Rotate 1s infinite linear;
-    }
+      &:hover{
+        animation: earth-Rotate 1s infinite linear;
+      }
     }
     .start{
-     text-align: center;
-      color: #FFFFFF;
-      animation: start 1s infinite;
+      text-align: center;
+       color: #FFFFFF;
+       animation: start 1s infinite;
+     }
+  }
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .menu {      
+    width: 10%;
+    height: 100vh;
+    padding: 5%;
+    float: left;
+    border-right: 2px solid #d0d0d0;
+    h3{
+      margin-top: 5%;
+      i{
+        margin-right: 10%;
+        font-size: 15px;
+      }
+    }
+    ul{
+      margin-left: 10%;
+      li{
+        margin-top: 5%;
+        margin-left: 15%;
+        list-style: none;
+        i{
+          margin-right: 10%;
+          font-size: 5px;
+        }
+      }
     }
   }
-  
+  .topic{
+    width: 75%;
+    height: 100vh;
+    float: left;
+    .title{
+      margin: 0 auto;
+      margin-top: 5%;
+      width: 35%;
+      .tit{
+        font-size: 30px;
+        padding-bottom: 2%;
+        border-bottom: 3px solid #2828ff;
+      }
+      .sub{
+        font-size: 20px;
+        padding-top: 2%;
+        float: right;
+      }
+    }
+  }
 }
-
 @-webkit-keyframes earth-Rotate {
   from {
     -webkit-transform: rotate(0deg);

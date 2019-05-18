@@ -13,9 +13,7 @@
     height: 100vh;
     overflow: hidden; }
     .container .header ul {
-      width: 5000px;
-      position: absolute;
-      z-index: 0; }
+      width: 5000px; }
       .container .header ul li {
         display: inline-block;
         float: left;
@@ -48,6 +46,47 @@
       color: #FFFFFF;
       -webkit-animation: start 1s infinite;
       animation: start 1s infinite; }
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+  .content .menu {
+    width: 10%;
+    height: 100vh;
+    padding: 5%;
+    float: left;
+    border-right: 2px solid #d0d0d0; }
+    .content .menu h3 {
+      margin-top: 5%; }
+      .content .menu h3 i {
+        margin-right: 10%;
+        font-size: 15px; }
+    .content .menu ul {
+      margin-left: 10%; }
+      .content .menu ul li {
+        margin-top: 5%;
+        margin-left: 15%;
+        list-style: none; }
+        .content .menu ul li i {
+          margin-right: 10%;
+          font-size: 5px; }
+  .content .topic {
+    width: 75%;
+    height: 100vh;
+    float: left; }
+    .content .topic .title {
+      margin: 0 auto;
+      margin-top: 5%;
+      width: 35%; }
+      .content .topic .title .tit {
+        font-size: 30px;
+        padding-bottom: 2%;
+        border-bottom: 3px solid #2828ff; }
+      .content .topic .title .sub {
+        font-size: 20px;
+        padding-top: 2%;
+        float: right; }
 
 @-webkit-keyframes earth-Rotate {
   from {

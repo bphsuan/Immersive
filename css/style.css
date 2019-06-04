@@ -64,7 +64,7 @@
       height: 100vh;
       padding: 20px 2%;
       float: left;
-      line-height: 2;
+      line-height: 1.5;
       -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
       .container .content .menu ul {
@@ -99,6 +99,8 @@
         width: 90%; }
         .container .content .topic .summary p {
           text-align: center; }
+      .container .content .topic .section {
+        float: left; }
       .container .content .topic .title {
         margin: 0 auto;
         margin-top: 5%;
@@ -116,13 +118,11 @@
           color: #343434;
           font-weight: bold; }
       .container .content .topic .topic_section {
-        position: relative;
         width: 100%;
-        height: 100vh; }
+        float: left; }
         .container .content .topic .topic_section .topic_pic {
-          position: absolute;
           width: 50%;
-          height: 70%; }
+          float: left; }
           .container .content .topic .topic_section .topic_pic #turtlePic {
             width: 80%;
             height: 300px;
@@ -130,10 +130,8 @@
             padding-top: 80px;
             vertical-align: middle; }
         .container .content .topic .topic_section .topic_content {
-          position: absolute;
-          right: 0;
           width: 45%;
-          height: 70%;
+          float: left;
           padding: 80px 2.5%;
           opacity: 0; }
           .container .content .topic .topic_section .topic_content p {
@@ -164,7 +162,8 @@
             font-size: 18px;
             text-align: center;
             padding: 15px 20px;
-            margin-top: 20px; }
+            float: left;
+            margin: 10px 0; }
           .container .content .topic .topic_section .topic_content #turtle_btn {
             background-color: #cc9900;
             border: 3px solid #cc9900;
@@ -194,15 +193,14 @@
               background-color: #fff; }
         .container .content .topic .topic_section .topic_conclusion {
           width: 100%;
-          height: 30%;
-          position: absolute;
-          top: 70%; }
+          padding: 35px 0;
+          margin: 10px 0;
+          float: left; }
           .container .content .topic .topic_section .topic_conclusion .conclusion {
             margin: 0 auto;
-            width: 70%;
-            height: 100%; }
+            width: 70%; }
             .container .content .topic .topic_section .topic_conclusion .conclusion .conclusion_title {
-              padding: 25px 0 5px 0;
+              padding: 10px 0;
               text-align: left;
               color: #ffffff;
               font-size: 28px;

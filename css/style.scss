@@ -1,11 +1,16 @@
-$color-main: #004aaf;
-$color-gray: #343434;
+$color-main: #343434;
+$color-orange: #cc9900;
+$color-pink: #eb8888;
+$color-gray: #666666;
+$color-green: #333300;
+$color-sea: #336666;
+$color-blue: #003366;
 $fontFamily: sans-serif, Microsoft JhengHei;
 $fontSize-title: 36px;
 $fontSize-subtitle: 28px;
 $fontSize-text: 18px;
 $shadow: 3px 3px 3px #ccc;
-
+$transition: all 0.5s;
 * {
   margin: 0;
   padding: 0;
@@ -53,15 +58,24 @@ $shadow: 3px 3px 3px #ccc;
         -o-animation: earth-Rotate 5s infinite linear;
         animation: earth-Rotate 5s infinite linear;
         &:hover {
-          animation: earth-Rotate 2.5s infinite linear;
+          animation: earth-Rotate 3s infinite linear;
+          cursor: pointer;
         }
       }
       .start {
+        margin-top: 20px;
         text-align: center;
         color: #ffffff;
-        animation: start 1s infinite;
+        animation: start 1.5s infinite;
         .start_text {
+          font-weight: 500;
           color: #ffffff;
+          font-size: $fontSize-subtitle;
+          letter-spacing: 5px;
+          text-shadow: 1px 1px 2px $color-main;
+        }
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -70,44 +84,46 @@ $shadow: 3px 3px 3px #ccc;
     width: 100%;
     overflow: hidden;
     .menu {
-      width: 10%;
+      width: 16%;
       height: 100vh;
-      padding: 5% 3% 5% 5%;
+      padding: 20px 2%;
       float: left;
+      line-height: 2;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       ul {
-        font-weight: 700;
+        font-weight: 500;
         a {
-          color: #9d9d9d;
+          color: #999;
         }
         .big {
-          color: #9d9d9d;
-          font-size: 20px;
+          color: #999;
+          font-size: $fontSize-subtitle * 0.9;
           list-style: none;
-          margin-top: 5%;
+          margin-top: 10px;
           i {
-            margin-right: 10%;
-            font-size: 15px;
+            margin-right: 15px;
+            font-size: $fontSize-text * 0.9;
           }
         }
         .small {
-          color: #9d9d9d;
+          color: #999;
+          font-size: $fontSize-text;
           list-style: none;
-          margin-top: 5%;
-          margin-left: 15%;
+          margin-top: 10px;
+          margin-left: 10%;
           list-style: none;
           i {
-            margin-right: 10%;
-            font-size: 5px;
+            margin-right: 15px;
+            font-size: $fontSize-text * 0.5;
           }
         }
       }
     }
     .topic {
       width: 80%;
-      height: 200vh;
+      // height: 200vh;
       position: absolute;
       right: 0;
-      border-left: 2px solid #d0d0d0;
       .summary {
         margin: 0 auto;
         margin: 5%;
@@ -124,7 +140,7 @@ $shadow: 3px 3px 3px #ccc;
         .tit {
           font-size: 30px;
           padding-bottom: 2%;
-          border-bottom: 3px solid #343434;
+          border-bottom: 3px solid $color-main;
         }
         .sub {
           font-size: 20px;
@@ -132,7 +148,7 @@ $shadow: 3px 3px 3px #ccc;
           float: right;
         }
         p {
-          color: #343434;
+          color: $color-main;
           font-weight: bold;
         }
       }
@@ -144,61 +160,84 @@ $shadow: 3px 3px 3px #ccc;
           position: absolute;
           width: 50%;
           height: 70%;
-          div {
+          #turtlePic {
             width: 80%;
+            height: 300px;
             margin: 0 auto;
-            padding-top: 20vh;
+            padding-top: 80px;
             vertical-align: middle;
           }
         }
-  
+
         .topic_content {
           position: absolute;
           right: 0;
-          width: 50%;
+          width: 45%;
           height: 70%;
-          padding-right: 5vw;
-          padding-top: 20vh;
+          padding: 80px 2.5%;
           opacity: 0;
           p {
             margin-bottom: 5%;
           }
           .topic_title {
-            font-size: 25px;
+            font-size: $fontSize-subtitle * 0.8;
           }
           .topic_turtle {
-            font-size: 30px;
-            font-weight: 800;
-            color: #3c6f00;
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-orange;
           }
           .topic_smog {
-            font-size: 30px;
-            font-weight: 800;
-            color: #525252;
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-gray;
           }
           .topic_coral {
-            font-size: 30px;
-            font-weight: 800;
-            color: #eb8888;
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-pink;
           }
           .topic_text {
             padding-right: 30%;
+            line-height: 2;
+            text-align: justify;
+            text-justify: distribute;
           }
           .topic_btn {
-            border-radius: 20px;
+            border-radius: 30px;
+            letter-spacing: 5px;
             color: #ffffff;
-            font-size: 20px;
-            padding: 2% 4% 2% 4%;
+            font-size: $fontSize-text;
+            text-align: center;
+            padding: 15px 20px;
             margin-top: 20px;
           }
           #turtle_btn {
-            background-color: #3c6f00;
+            background-color: $color-orange;
+            border: 3px solid $color-orange;
+            transition: $transition;
+            &:hover {
+              color: $color-orange;
+              background-color: #fff;
+            }
           }
           #smog_btn {
-            background-color: #525252;
+            background-color: $color-gray;
+            border: 3px solid $color-gray;
+            transition: $transition;
+            &:hover {
+              color: $color-gray;
+              background-color: #fff;
+            }
           }
           #coral_btn {
-            background-color: #eb8888;
+            background-color: $color-pink;
+            border: 3px solid $color-pink;
+            transition: $transition;
+            &:hover {
+              color: $color-pink;
+              background-color: #fff;
+            }
           }
         }
         .topic_conclusion {
@@ -211,68 +250,76 @@ $shadow: 3px 3px 3px #ccc;
             width: 70%;
             height: 100%;
             .conclusion_title {
+              padding: 25px 0 5px 0;
               text-align: left;
               color: #ffffff;
-              font-size: 30px;
+              font-size: $fontSize-subtitle;
+              letter-spacing: 5px;
             }
             .conclusion_content {
               text-align: left;
               color: #ffffff;
+              font-size: $fontSize-text;
+              line-height: 2;
+              text-align: justify;
+              text-justify: distribute;
             }
           }
         }
         #turtle_conclusion {
-          background-color: #3c6f00;
+          background-color: $color-orange;
         }
         #smog_conclusion {
-          background-color: #525252;
+          background-color: $color-gray;
         }
         #coral_conclusion {
-          background-color: #eb8888;
+          background-color: $color-pink;
         }
       }
       .group {
         width: 100%;
         height: 100vh;
         .member {
-          width: 25%;
-          height: 350px;
+          width: 27%;
+          height: 325px;
           background-color: #ffffff;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
           position: relative;
           float: left;
-          margin: 2% 0 0 5%;
+          margin: 30px 3% 0 3.3%;
           .pic {
             width: 90%;
-            height: 190px;
-            margin: 30px 5% 40px 5%;
+            height: 180px;
+            margin: 20px 5% 30px 5%;
             float: left;
           }
           .info {
             width: 100%;
             height: 90px;
-            background-color: #eeeeee;
+            background-color: #ccc;
             float: left;
             position: absolute;
             bottom: 0;
-            line-height: 100px;
+            line-height: 110px;
             text-align: center;
-            p{
-              color: #343434;
+            p {
+              color: $color-main;
+              font-size: $fontSize-text;
             }
           }
-          .name{
-            width: 50%;
-            height: 50px;
+          .name {
+            width: 60%;
+            height: 45px;
             position: absolute;
             background-color: #343434;
-            top: 235px;
+            top: 215px;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
-            line-height: 50px;
+            line-height: 45px;
             text-align: center;
-            p{
-              font-size: 30px;
+            p {
+              font-size: $fontSize-subtitle;
+              letter-spacing: 5px;
               color: #ffffff;
             }
           }
@@ -280,15 +327,7 @@ $shadow: 3px 3px 3px #ccc;
       }
     }
   }
-  // .footer{
-  //   width: 100%;
-  //   height: 200px;
-  //   position: absolute;
-  //   bottom: 0;
-  //   background-color: #343434;
-  // }
 }
-
 
 @-webkit-keyframes earth-Rotate {
   from {
@@ -322,7 +361,7 @@ $shadow: 3px 3px 3px #ccc;
     color: #9d9d9d;
   }
   to {
-    color: #2828ff;
+    color: $color-main;
   }
 }
 @-moz-keyframes color {
@@ -330,7 +369,7 @@ $shadow: 3px 3px 3px #ccc;
     color: #9d9d9d;
   }
   to {
-    color: #2828ff;
+    color: $color-main;
   }
 }
 @-webkit-keyframes color {
@@ -338,7 +377,7 @@ $shadow: 3px 3px 3px #ccc;
     color: #9d9d9d;
   }
   to {
-    color: #2828ff;
+    color: $color-main;
   }
 }
 

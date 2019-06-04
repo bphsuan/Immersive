@@ -16,12 +16,12 @@ $(document).ready(function () {
     }
     //滑到文章才顯示動畫
     $('.topic_content').each(function (i) {
-      var bottom_of_object = $(this).offset().top+10;
+      var bottom_of_object = $(this).offset().top + 10;
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if (bottom_of_window > bottom_of_object) {
         $(this).animate({ 'opacity': '1' }, 2000);
-        
+
       }
     });
   });
@@ -47,7 +47,7 @@ $(function () {
 $(".menu ul li a").click(function () {
   $(".menu ul li a").css({ "color": "#9d9d9d" });
   $(this).css({
-    "color": "#2828ff", "animation": "color 2s",
+    "color": "#343434", "animation": "color 2s",
     "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
   }).siblings().css({ "color": "#9d9d9d" });
 });

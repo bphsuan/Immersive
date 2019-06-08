@@ -128,6 +128,57 @@ $transition: all 0.5s;
         margin: 0 auto;
         margin: 5%;
         width: 90%;
+        .box {
+          width: 100%;
+          height: 400px;
+          position: relative;
+          .list {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: absolute;
+            li {
+              position: absolute;
+              top: 0;
+              left: 0;
+              list-style: none;
+              opacity: 0;
+              transition: all 0.3s ease-out;
+            }
+            .p1 {
+              transform: translate3d(0%, 10px, 0) scale(0.5);
+              transform-origin: 0 10%;
+              opacity: 1;
+            }
+            .p2 {
+              transform: translate3d(25%, 30px, 0) scale(0.6);
+              transform-origin: 0 20%;
+              opacity: 1;
+              z-index: 2;
+            }
+            .p3 {
+              transform: translate3d(50%, 60px, 0) scale(0.75);
+              z-index: 3;
+              opacity: 1;
+            }
+            .p4 {
+              transform: translate3d(75%, 30px, 0) scale(0.6);
+              transform-origin: 100% 20%;
+              z-index: 2;
+              opacity: 1;
+            }
+            .p5 {
+              transform: translate3d(100%, 10px, 0) scale(0.5);
+              transform-origin: 100% 10%;
+              opacity: 1;
+            }
+            img {
+              width: 500px;
+              height: auto;
+              border: none;
+            }
+          }
+        }
         p {
           text-align: center;
         }
@@ -203,6 +254,21 @@ $transition: all 0.5s;
             font-weight: 500;
             color: $color-pink;
           }
+          .topic_rainforest {
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-green;
+          }
+          .topic_oil {
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-sea;
+          }
+          .topic_plastic {
+            font-size: $fontSize-subtitle;
+            font-weight: 500;
+            color: $color-blue;
+          }
           .topic_text {
             padding-right: 30%;
             line-height: 2;
@@ -246,6 +312,33 @@ $transition: all 0.5s;
               background-color: #fff;
             }
           }
+          #rainforest_btn {
+            background-color: $color-green;
+            border: 3px solid $color-green;
+            transition: $transition;
+            &:hover {
+              color: $color-green;
+              background-color: #fff;
+            }
+          }
+          #oil_btn {
+            background-color: $color-sea;
+            border: 3px solid $color-sea;
+            transition: $transition;
+            &:hover {
+              color: $color-sea;
+              background-color: #fff;
+            }
+          }
+          #plastic_btn {
+            background-color: $color-blue;
+            border: 3px solid $color-blue;
+            transition: $transition;
+            &:hover {
+              color: $color-blue;
+              background-color: #fff;
+            }
+          }
         }
         .topic_conclusion {
           width: 100%;
@@ -284,6 +377,15 @@ $transition: all 0.5s;
         }
         #coral_conclusion {
           background-color: $color-pink;
+        }
+        #rainforest_conclusion {
+          background-color: $color-green;
+        }
+        #oil_conclusion {
+          background-color: $color-sea;
+        }
+        #plastic_conclusion {
+          background-color: $color-blue;
         }
       }
       .group {

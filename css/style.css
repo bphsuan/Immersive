@@ -66,13 +66,19 @@
       float: left;
       line-height: 1.5;
       -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      z-index: 10; }
+      .container .content .menu img {
+        width: 100%;
+        height: auto;
+        margin: 5px 0; }
       .container .content .menu ul {
         font-weight: 500; }
         .container .content .menu ul a {
-          color: #999; }
+          color: #aaa;
+          letter-spacing: 1px; }
         .container .content .menu ul .big {
-          color: #999;
+          color: #aaa;
           font-size: 25.2px;
           list-style: none;
           margin-top: 10px; }
@@ -80,7 +86,7 @@
             margin-right: 15px;
             font-size: 16.2px; }
         .container .content .menu ul .small {
-          color: #999;
+          color: #aaa;
           font-size: 18px;
           list-style: none;
           margin-top: 10px;
@@ -155,20 +161,22 @@
               height: auto;
               border: none; }
         .container .content .topic .summary p {
-          text-align: center; }
+          text-align: justify;
+          text-justify: distribute;
+          line-height: 2; }
       .container .content .topic .section {
+        width: 100%;
         float: left; }
       .container .content .topic .title {
-        margin: 0 auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        width: 35%; }
+        margin: 40px 32.5%;
+        width: 35%;
+        float: left; }
         .container .content .topic .title .tit {
-          font-size: 30px;
+          font-size: 28px;
           padding-bottom: 2%;
           border-bottom: 3px solid #343434; }
         .container .content .topic .title .sub {
-          font-size: 20px;
+          font-size: 18px;
           padding-top: 2%;
           float: right; }
         .container .content .topic .title p {
@@ -198,27 +206,27 @@
           .container .content .topic .topic_section .topic_content .topic_turtle {
             font-size: 28px;
             font-weight: 500;
-            color: #cc9900; }
+            color: #b37a08; }
           .container .content .topic .topic_section .topic_content .topic_smog {
             font-size: 28px;
             font-weight: 500;
-            color: #666666; }
+            color: #4a4c4f; }
           .container .content .topic .topic_section .topic_content .topic_coral {
             font-size: 28px;
             font-weight: 500;
-            color: #eb8888; }
+            color: #bd512e; }
           .container .content .topic .topic_section .topic_content .topic_rainforest {
             font-size: 28px;
             font-weight: 500;
-            color: #333300; }
+            color: #005b1f; }
           .container .content .topic .topic_section .topic_content .topic_oil {
             font-size: 28px;
             font-weight: 500;
-            color: #336666; }
+            color: rgba(0, 134, 247, 0.9); }
           .container .content .topic .topic_section .topic_content .topic_plastic {
             font-size: 28px;
             font-weight: 500;
-            color: #003366; }
+            color: #0e3d69; }
           .container .content .topic .topic_section .topic_content .topic_text {
             padding-right: 30%;
             line-height: 2;
@@ -234,59 +242,77 @@
             float: left;
             margin: 10px 0; }
           .container .content .topic .topic_section .topic_content #turtle_btn {
-            background-color: #cc9900;
-            border: 3px solid #cc9900;
+            background: -webkit-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);
+            background: -o-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);
+            background: linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+            background: -moz-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+            background: -webkit-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+            background: -o-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #turtle_btn:hover {
-              color: #cc9900;
-              background-color: #fff; }
+              opacity: 0.8; }
           .container .content .topic .topic_section .topic_content #smog_btn {
-            background-color: #666666;
-            border: 3px solid #666666;
+            background: -webkit-linear-gradient(35deg, #adacad 3%, #4a4c4f 100%);
+            background: -o-linear-gradient(35deg, #adacad 3%, #4a4c4f 100%);
+            background: linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+            background: -moz-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+            background: -webkit-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+            background: -o-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #smog_btn:hover {
-              color: #666666;
-              background-color: #fff; }
+              opacity: 0.8; }
           .container .content .topic .topic_section .topic_content #coral_btn {
-            background-color: #eb8888;
-            border: 3px solid #eb8888;
+            background: -webkit-linear-gradient(40deg, #efc4c6 7%, #bd512e 81%);
+            background: -o-linear-gradient(40deg, #efc4c6 7%, #bd512e 81%);
+            background: linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+            background: -moz-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+            background: -webkit-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+            background: -o-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #coral_btn:hover {
-              color: #eb8888;
-              background-color: #fff; }
+              opacity: 0.8; }
           .container .content .topic .topic_section .topic_content #rainforest_btn {
-            background-color: #333300;
-            border: 3px solid #333300;
+            background: -webkit-linear-gradient(40deg, #829d33 30%, #005b1f 78%);
+            background: -o-linear-gradient(40deg, #829d33 30%, #005b1f 78%);
+            background: linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+            background: -moz-linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+            background: -webkit-linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+            background: -o-linear-gradient(50deg, #829d33 30%, #005b1f 78%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #rainforest_btn:hover {
-              color: #333300;
-              background-color: #fff; }
+              opacity: 0.8; }
           .container .content .topic .topic_section .topic_content #oil_btn {
-            background-color: #336666;
-            border: 3px solid #336666;
+            background: -webkit-linear-gradient(40deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+            background: -o-linear-gradient(40deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+            background: linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+            background: -moz-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+            background: -webkit-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+            background: -o-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #oil_btn:hover {
-              color: #336666;
-              background-color: #fff; }
+              opacity: 0.8; }
           .container .content .topic .topic_section .topic_content #plastic_btn {
-            background-color: #003366;
-            border: 3px solid #003366;
+            background: -webkit-linear-gradient(35deg, #668cb8 24%, #0b2f51 81%);
+            background: -o-linear-gradient(35deg, #668cb8 24%, #0b2f51 81%);
+            background: linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+            background: -moz-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+            background: -webkit-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+            background: -o-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
             -webkit-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
             .container .content .topic .topic_section .topic_content #plastic_btn:hover {
-              color: #003366;
-              background-color: #fff; }
+              opacity: 0.8; }
         .container .content .topic .topic_section .topic_conclusion {
           width: 100%;
           padding: 35px 0;
@@ -309,17 +335,47 @@
               text-align: justify;
               text-justify: distribute; }
         .container .content .topic .topic_section #turtle_conclusion {
-          background-color: #cc9900; }
+          background: -webkit-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);
+          background: -o-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);
+          background: linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+          background: -moz-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+          background: -webkit-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%);
+          background: -o-linear-gradient(55deg, #e7c85a 24%, #9d6c0a 81%); }
         .container .content .topic .topic_section #smog_conclusion {
-          background-color: #666666; }
+          background: -webkit-linear-gradient(35deg, #adacad 3%, #4a4c4f 100%);
+          background: -o-linear-gradient(35deg, #adacad 3%, #4a4c4f 100%);
+          background: linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+          background: -moz-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+          background: -webkit-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%);
+          background: -o-linear-gradient(55deg, #adacad 3%, #4a4c4f 100%); }
         .container .content .topic .topic_section #coral_conclusion {
-          background-color: #eb8888; }
+          background: -webkit-linear-gradient(40deg, #efc4c6 7%, #bd512e 81%);
+          background: -o-linear-gradient(40deg, #efc4c6 7%, #bd512e 81%);
+          background: linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+          background: -moz-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+          background: -webkit-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%);
+          background: -o-linear-gradient(50deg, #efc4c6 7%, #bd512e 81%); }
         .container .content .topic .topic_section #rainforest_conclusion {
-          background-color: #333300; }
+          background: -webkit-linear-gradient(40deg, #829d33 30%, #005b1f 78%);
+          background: -o-linear-gradient(40deg, #829d33 30%, #005b1f 78%);
+          background: linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+          background: -moz-linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+          background: -webkit-linear-gradient(50deg, #829d33 30%, #005b1f 78%);
+          background: -o-linear-gradient(50deg, #829d33 30%, #005b1f 78%); }
         .container .content .topic .topic_section #oil_conclusion {
-          background-color: #336666; }
+          background: -webkit-linear-gradient(40deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+          background: -o-linear-gradient(40deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+          background: linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+          background: -moz-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+          background: -webkit-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%);
+          background: -o-linear-gradient(50deg, rgba(122, 186, 240, 0.9) 36%, rgba(0, 134, 247, 0.9) 78%); }
         .container .content .topic .topic_section #plastic_conclusion {
-          background-color: #003366; }
+          background: -webkit-linear-gradient(35deg, #668cb8 24%, #0b2f51 81%);
+          background: -o-linear-gradient(35deg, #668cb8 24%, #0b2f51 81%);
+          background: linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+          background: -moz-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+          background: -webkit-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
+          background: -o-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%); }
       .container .content .topic .group {
         width: 100%;
         height: 100vh; }
@@ -353,7 +409,12 @@
             width: 60%;
             height: 45px;
             position: absolute;
-            background-color: #343434;
+            background: -webkit-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -moz-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -webkit-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
             top: 215px;
             border-top-right-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -363,6 +424,73 @@
               font-size: 28px;
               letter-spacing: 5px;
               color: #ffffff; }
+      .container .content .topic .effort {
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 50px 0 0 0;
+        float: left;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        background-attachment: fixed; }
+        .container .content .topic .effort .effort_title {
+          width: 90%;
+          margin: 0 5%;
+          color: #fff;
+          font-size: 28px;
+          padding: 20px 0;
+          letter-spacing: 5px;
+          text-shadow: 1px 1px 2px #343434; }
+        .container .content .topic .effort .effort_title_r {
+          text-align: right; }
+        .container .content .topic .effort .effort_title_l {
+          text-align: left; }
+        .container .content .topic .effort .effort_content {
+          width: 70%;
+          padding: 30px;
+          line-height: 2;
+          background-color: white; }
+          .container .content .topic .effort .effort_content p {
+            font-size: 18px;
+            text-align: justify;
+            text-justify: distribute; }
+          .container .content .topic .effort .effort_content .effort_btn {
+            border-radius: 30px;
+            letter-spacing: 5px;
+            color: #ffffff;
+            background: -webkit-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -moz-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -webkit-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            font-size: 18px;
+            text-align: center;
+            padding: 15px 20px;
+            margin: 20px 5%;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+            .container .content .topic .effort .effort_content .effort_btn:hover {
+              opacity: 0.8;
+              cursor: pointer; }
+          .container .content .topic .effort .effort_content .effort_btn_r {
+            float: right; }
+          .container .content .topic .effort .effort_content .effort_btn_ {
+            float: left; }
+        .container .content .topic .effort .effort_content_r {
+          margin: 0 0 0 auto;
+          float: right;
+          border-top-left-radius: 40px; }
+        .container .content .topic .effort .effort_content_l {
+          margin: 0 auto 0 0;
+          float: left;
+          border-top-right-radius: 40px; }
+      .container .content .topic #coral50 {
+        background-image: url(../assets/sea.jpg); }
+      .container .content .topic #europe {
+        background-image: url(../assets/plastic.jpg); }
 
 @-webkit-keyframes earth-Rotate {
   from {

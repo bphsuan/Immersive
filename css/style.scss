@@ -128,6 +128,7 @@ $transition: all 0.5s;
     .menu {
       width: 16%;
       height: 100vh;
+      overflow: scroll;
       padding: 20px 2%;
       float: left;
       line-height: 1.5;
@@ -477,6 +478,16 @@ $transition: all 0.5s;
           }
         }
       }
+      .footer{
+        width: 100%;
+        height: 130px;
+        background-color: $color-main;
+        float: left;
+        text-align: center;
+        line-height: 130px;
+        font-size: 25px;
+        color: #ffffff;
+      }
       .effort {
         width: 100%;
         margin: 0 0 50px 0;
@@ -512,27 +523,6 @@ $transition: all 0.5s;
             text-align: justify;
             text-justify: distribute;
           }
-          .effort_btn {
-            border-radius: 30px;
-            letter-spacing: 5px;
-            color: #ffffff;
-            @include color-main();
-            font-size: $fontSize-text;
-            text-align: center;
-            padding: 15px 20px;
-            margin: 20px 5%;
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-              cursor: pointer;
-            }
-          }
-          .effort_btn_r {
-            float: right;
-          }
-          .effort_btn_ {
-            float: left;
-          }
         }
         .effort_content_r {
           margin: 0 0 0 auto;
@@ -550,6 +540,15 @@ $transition: all 0.5s;
       }
       #europe {
         background-image: url(../assets/plastic.jpg);
+      }
+      #montreal{
+        background-image: url(../assets/globalwarming.jpg);
+      }
+      #beach{
+        background-image: url(../assets/beach.jpg);
+      }
+      #pollution{
+        background-image: url(../assets/airpollution.jpg);
       }
     }
   }

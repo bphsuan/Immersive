@@ -189,7 +189,7 @@
         .container .content .topic .topic_section .topic_pic {
           width: 50%;
           float: left; }
-          .container .content .topic .topic_section .topic_pic #turtlePic {
+          .container .content .topic .topic_section .topic_pic .t_pic {
             width: 80%;
             height: 300px;
             margin: 0 auto;

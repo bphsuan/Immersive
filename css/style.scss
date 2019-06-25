@@ -86,11 +86,28 @@ $transition: all 0.5s;
             font-size: $fontSize-subtitle;
             color: #ffffff;
             text-shadow: 0px 0px 3px $color-main;
-            font-weight: bolder;
+            font-weight: bold;
+            letter-spacing: 3px;
+            @media screen and(max-width:500px) {
+              & {
+                font-size: $fontSize-subtitle * 0.9;
+                letter-spacing: 1px;
+              }
+            }
           }
           .pic_t1 {
             padding-top: 5%;
             padding-right: 10%;
+            @media screen and(max-width:1080px) {
+              & {
+                padding-top: 10%;
+              }
+            }
+            @media screen and(max-width:500px) {
+              & {
+                padding-top: 20%;
+              }
+            }
           }
           .pic_t2 {
             margin-top: 0.5%;
@@ -99,12 +116,18 @@ $transition: all 0.5s;
         }
         #bg1 {
           background-image: url(../assets/bg01.jpg);
+          background-size: cover;
+          background-position: center center;
         }
         #bg2 {
           background-image: url(../assets/bg02.jpg);
+          background-size: cover;
+          background-position: center center;
         }
         #bg3 {
           background-image: url(../assets/bg03.jpg);
+          background-size: cover;
+          background-position: center center;
         }
       }
     }
@@ -114,12 +137,17 @@ $transition: all 0.5s;
       width: 100%;
       height: 90vh;
       div {
-        width: 34vw;
+        width: 35%;
         margin: 0 auto;
+        @media screen and(max-width:768px) {
+          & {
+            width: 60%;
+          }
+        }
       }
       embed {
-        margin: 200px 0px 0px 60px;
-        width: 25vw;
+        margin: 200px 0px 0px 0px;
+        width: 100%;
         height: auto;
         -webkit-animation: earth-Rotate 5s infinite linear;
         -moz-animation: earth-Rotate 5s infinite linear;
@@ -131,7 +159,7 @@ $transition: all 0.5s;
         }
       }
       .start {
-        margin-top: 20px;
+        margin-top: 25px;
         text-align: center;
         color: #ffffff;
         animation: start 1.5s infinite;
@@ -152,14 +180,35 @@ $transition: all 0.5s;
     width: 100%;
     overflow: hidden;
     .menu {
-      width: 16%;
+      width: 17%;
       height: 100vh;
       overflow: scroll;
-      padding: 20px 2%;
+      padding: 20px 1.5%;
       float: left;
       line-height: 1.5;
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       z-index: 10;
+      @media screen and(max-height:850px) {
+        & {
+          line-height: 1.25;
+        }
+      }
+      @media screen and(max-width:1080px) {
+        & {
+          display: none;
+        }
+      }
+      @media screen and(max-width:1200px) {
+        & {
+          width: 18%;
+          padding: 20px 1%;
+        }
+        @media screen and(max-height:850px) {
+          & {
+            line-height: 1.5;
+          }
+        }
+      }
       img {
         width: 100%;
         height: auto;
@@ -169,13 +218,18 @@ $transition: all 0.5s;
         font-weight: 500;
         a {
           color: #aaa;
-          letter-spacing: 1px;
         }
         .big {
           color: #aaa;
           font-size: $fontSize-subtitle * 0.9;
           list-style: none;
           margin-top: 10px;
+          letter-spacing: 1px;
+          @media screen and(max-width:1200px) {
+            & {
+              font-size: $fontSize-subtitle * 0.8;
+            }
+          }
           i {
             margin-right: 15px;
             font-size: $fontSize-text * 0.9;
@@ -188,6 +242,14 @@ $transition: all 0.5s;
           margin-top: 10px;
           margin-left: 10%;
           list-style: none;
+          letter-spacing: 1px;
+          @media screen and(max-width:1200px) {
+            & {
+              font-size: $fontSize-text * 0.8;
+              margin-left: 5%;
+              letter-spacing: 0;
+            }
+          }
           i {
             margin-right: 15px;
             font-size: $fontSize-text * 0.5;
@@ -195,391 +257,641 @@ $transition: all 0.5s;
         }
       }
     }
-    .topic {
-      width: 80%;
-      // height: 200vh;
-      position: absolute;
-      right: 0;
-      .summary {
-        margin: 0 auto;
-        margin: 5%;
-        width: 90%;
-        .box {
+    .rwdMenu {
+      width: 280px;
+      height: 100vh;
+      padding: 0px 10px;
+      overflow: scroll;
+      line-height: 1.5;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      display: none;
+      position: fixed;
+      top: 0;
+      left: -300px;
+      background-color: #fff;
+      @media screen and(max-height:850px) {
+        & {
+          line-height: 1.25;
+        }
+      }
+      @media screen and(max-width:1080px) {
+        & {
+          display: block;
+        }
+      }
+    }
+    .hamburger1 {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 25px;
+      left: 10px;
+      border: none;
+      color: #fff;
+      @include color-main();
+      z-index: 15;
+      display: none;
+      transition: $transition;
+      @media screen and(max-width:1080px) {
+        & {
+          display: block;
+        }
+      }
+      i {
+        font-size: $fontSize-subtitle;
+        box-shadow: 0, 0, 0, rgba(0, 0, 0, 0);
+      }
+      &:hover {
+        // color: $color-main;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+    .hamburger2 {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 25px;
+      left: 10px;
+      border: none;
+      color: #fff;
+      @include color-main();
+      z-index: 15;
+      display: none;
+      transition: $transition;
+      i {
+        font-size: $fontSize-subtitle;
+        box-shadow: 0, 0, 0, rgba(0, 0, 0, 0);
+      }
+      &:hover {
+        // color: $color-main;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 75%;
+      height: auto;
+      margin: 5px 0 5px 25%;
+      @media screen and(max-width:360px) {
+        & {
+          width: 70%;
+          height: auto;
+          margin: 0px 5% 0px 25%;
+        }
+      }
+    }
+    ul {
+      font-weight: 500;
+      a {
+        color: #aaa;
+      }
+      .big {
+        color: #aaa;
+        font-size: $fontSize-subtitle * 0.9;
+        list-style: none;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        i {
+          margin-right: 15px;
+          font-size: $fontSize-text * 0.9;
+        }
+        @media screen and(max-width:360px) {
+          & {
+            font-size: $fontSize-subtitle * 0.8;
+            margin-top: 6px;
+          }
+        }
+      }
+      .small {
+        color: #aaa;
+        font-size: $fontSize-text;
+        list-style: none;
+        margin-top: 10px;
+        margin-left: 10%;
+        list-style: none;
+        letter-spacing: 1px;
+        i {
+          margin-right: 15px;
+          font-size: $fontSize-text * 0.5;
+        }
+        @media screen and(max-width:360px) {
+          & {
+            font-size: $fontSize-text * 0.85;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+  .topic {
+    width: 80%;
+    // height: 200vh;
+    position: absolute;
+    right: 0;
+    .summary {
+      margin: 0 auto;
+      margin: 5%;
+      width: 90%;
+      .box {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        .list {
           width: 100%;
           height: 400px;
-          position: relative;
-          .list {
-            width: 100%;
-            height: 400px;
-            overflow: hidden;
+          overflow: hidden;
+          position: absolute;
+          li {
             position: absolute;
-            li {
-              position: absolute;
-              top: 0;
-              left: 0;
-              list-style: none;
-              opacity: 0;
-              transition: all 0.3s ease-out;
-            }
-            .p1 {
-              transform: translate3d(0%, 10px, 0) scale(0.5);
-              transform-origin: 0 10%;
-              opacity: 1;
-            }
-            .p2 {
-              transform: translate3d(25%, 30px, 0) scale(0.6);
-              transform-origin: 0 20%;
-              opacity: 1;
-              z-index: 2;
-            }
-            .p3 {
-              transform: translate3d(50%, 60px, 0) scale(0.75);
-              z-index: 3;
-              opacity: 1;
-            }
-            .p4 {
-              transform: translate3d(75%, 30px, 0) scale(0.6);
-              transform-origin: 100% 20%;
-              z-index: 2;
-              opacity: 1;
-            }
-            .p5 {
-              transform: translate3d(100%, 10px, 0) scale(0.5);
-              transform-origin: 100% 10%;
-              opacity: 1;
-            }
+            top: 0;
+            left: 0;
+            list-style: none;
+            opacity: 0;
+            transition: all 0.3s ease-out;
             img {
-              width: 500px;
-              height: auto;
-              border: none;
+              // width: 100px;
+            }
+          }
+          .p1 {
+            transform: translate3d(0%, 10px, 0) scale(0.5);
+            transform-origin: 0 10%;
+            opacity: 1;
+          }
+          .p2 {
+            transform: translate3d(25%, 30px, 0) scale(0.6);
+            transform-origin: 0 20%;
+            opacity: 1;
+            z-index: 2;
+          }
+          .p3 {
+            transform: translate3d(50%, 60px, 0) scale(0.75);
+            z-index: 3;
+            opacity: 1;
+          }
+          .p4 {
+            transform: translate3d(75%, 30px, 0) scale(0.6);
+            transform-origin: 100% 20%;
+            z-index: 2;
+            opacity: 1;
+          }
+          .p5 {
+            transform: translate3d(100%, 10px, 0) scale(0.5);
+            transform-origin: 100% 10%;
+            opacity: 1;
+          }
+        }
+      }
+      p {
+        // text-align: center;
+        text-align: justify;
+        text-justify: distribute;
+        line-height: 2;
+      }
+    }
+    .section {
+      width: 100%;
+      float: left;
+    }
+    .title {
+      width: 35%;
+      margin: 40px 32.5%;
+      float: left;
+      @media screen and(max-width:1080px) {
+        & {
+          width: 50%;
+          margin: 40px 25%;
+        }
+      }
+      @media screen and(max-width:768px) {
+        & {
+          width: 60%;
+          margin: 40px 20%;
+        }
+      }
+      @media screen and(max-width:550px) {
+        & {
+          width: 80%;
+          margin: 40px 10%;
+        }
+      }
+      @media screen and(max-width:360px) {
+        & {
+          width: 85%;
+          margin: 40px 7.5%;
+        }
+      }
+      .tit {
+        font-size: $fontSize-subtitle;
+        padding-bottom: 2%;
+        border-bottom: 3px solid $color-main;
+      }
+      .sub {
+        font-size: $fontSize-text;
+        padding-top: 2%;
+        float: right;
+      }
+      p {
+        color: $color-main;
+        font-weight: bold;
+      }
+    }
+    .topic_section {
+      width: 100%;
+      float: left;
+      .topic_pic {
+        width: 50%;
+        float: left;
+        @media screen and(max-width:768px) {
+          & {
+            width: 100%;
+          }
+        }
+        .t_pic {
+          width: 80%;
+          height: 300px;
+          margin: 0 auto;
+          padding-top: 80px;
+          position: relative;
+          @media screen and(max-width:500px) {
+            & {
+              height: 250px;
+              padding-top: 30px;
+            }
+          }
+          @media screen and(max-width:360px) {
+            & {
+              height: 180px;
+              padding-top: 0px;
+            }
+          }
+          img {
+            width: 80%;
+            padding: 0px 10%;
+            margin: 0;
+            height: auto;
+            border: none;
+            position: absolute;
+            bottom: 0;
+            float: left;
+            @media screen and(max-width:768px) {
+              & {
+                width: 60%;
+                padding: 0px 20%;
+              }
+            }
+          }
+          .shortPic {
+            width: 85%;
+            padding: 0px 7.5%;
+            @media screen and(max-width:768px) {
+              & {
+                width: 80%;
+                padding: 0px 10%;
+              }
+            }
+          }
+          .highPic {
+            width: 50%;
+            padding: 0px 25%;
+            @media screen and(max-width:1080px) {
+              & {
+                width: 60%;
+                padding: 0px 20%;
+              }
+            }
+            @media screen and(max-width:768px) {
+              & {
+                width: 40%;
+                padding: 0px 30%;
+              }
             }
           }
         }
+      }
+
+      .topic_content {
+        width: 45%;
+        float: left;
+        padding: 80px 2.5%;
+        opacity: 0;
+        @media screen and(max-width:768px) {
+          & {
+            width: 80%;
+            padding: 80px 10%;
+          }
+        }
         p {
-          // text-align: center;
+          margin-bottom: 5%;
+        }
+        .topic_title {
+          font-size: $fontSize-subtitle * 0.8;
+        }
+        .topic_turtle {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-orange;
+        }
+        .topic_smog {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-gray;
+        }
+        .topic_coral {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-pink;
+        }
+        .topic_rainforest {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-green;
+        }
+        .topic_oil {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-sea;
+        }
+        .topic_plastic {
+          font-size: $fontSize-subtitle;
+          font-weight: 500;
+          color: $color-blue;
+        }
+        .topic_text {
+          padding-right: 30%;
+          line-height: 2;
           text-align: justify;
           text-justify: distribute;
-          line-height: 2;
+          @media screen and(max-width:768px) {
+            & {
+              padding: 0;
+            }
+          }
         }
-      }
-      .section {
-        width: 100%;
-        float: left;
-      }
-      .title {
-        margin: 40px 32.5%;
-        width: 35%;
-        float: left;
-        .tit {
-          font-size: $fontSize-subtitle;
-          padding-bottom: 2%;
-          border-bottom: 3px solid $color-main;
-        }
-        .sub {
+        .topic_btn {
+          border-radius: 30px;
+          letter-spacing: 5px;
+          color: #ffffff;
           font-size: $fontSize-text;
-          padding-top: 2%;
-          float: right;
+          text-align: center;
+          padding: 15px 20px;
+          float: left;
+          margin: 10px 0;
+          @media screen and(max-width:768px) {
+            & {
+              float: right;
+            }
+          }
         }
-        p {
-          color: $color-main;
-          font-weight: bold;
+        #turtle_btn {
+          @include color-orange();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        #smog_btn {
+          @include color-gray();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        #coral_btn {
+          @include color-pink();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        #rainforest_btn {
+          @include color-green();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        #oil_btn {
+          @include color-sea();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        #plastic_btn {
+          @include color-blue();
+          transition: $transition;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
-      .topic_section {
-        // position: relative;
+      .topic_conclusion {
         width: 100%;
-        // height: 100vh;
+        padding: 35px 0;
+        margin: 10px 0;
+        // height: 30%;
         float: left;
-        .topic_pic {
-          // position: absolute;
-          width: 50%;
-          // height: 70%;
-          float: left;
-          .t_pic {
-            width: 80%;
-            height: 300px;
-            margin: 0 auto;
-            padding-top: 80px;
-            vertical-align: middle;
-          }
-        }
-
-        .topic_content {
-          // position: absolute;
-          // right: 0;
-          width: 45%;
-          // height: 70%;
-          float: left;
-          padding: 80px 2.5%;
-          opacity: 0;
-          p {
-            margin-bottom: 5%;
-          }
-          .topic_title {
-            font-size: $fontSize-subtitle * 0.8;
-          }
-          .topic_turtle {
+        // position: absolute;
+        // top: 70%;
+        .conclusion {
+          margin: 0 auto;
+          width: 70%;
+          // height: 100%;
+          .conclusion_title {
+            padding: 10px 0;
+            text-align: left;
+            color: #ffffff;
             font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-orange;
+            letter-spacing: 5px;
           }
-          .topic_smog {
-            font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-gray;
-          }
-          .topic_coral {
-            font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-pink;
-          }
-          .topic_rainforest {
-            font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-green;
-          }
-          .topic_oil {
-            font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-sea;
-          }
-          .topic_plastic {
-            font-size: $fontSize-subtitle;
-            font-weight: 500;
-            color: $color-blue;
-          }
-          .topic_text {
-            padding-right: 30%;
+          .conclusion_content {
+            text-align: left;
+            color: #ffffff;
+            font-size: $fontSize-text;
             line-height: 2;
             text-align: justify;
             text-justify: distribute;
           }
-          .topic_btn {
-            border-radius: 30px;
+        }
+      }
+      #turtle_conclusion {
+        @include color-orange();
+      }
+      #smog_conclusion {
+        @include color-gray();
+      }
+      #coral_conclusion {
+        @include color-pink();
+      }
+      #rainforest_conclusion {
+        @include color-green();
+      }
+      #oil_conclusion {
+        @include color-sea();
+      }
+      #plastic_conclusion {
+        @include color-blue();
+      }
+    }
+    .group {
+      width: 100%;
+      height: 100vh;
+      .member {
+        width: 27%;
+        height: 325px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+        position: relative;
+        float: left;
+        margin: 30px 3% 0 3.3%;
+        .pic {
+          width: 90%;
+          height: 180px;
+          margin: 20px 5% 30px 5%;
+          float: left;
+        }
+        .info {
+          width: 100%;
+          height: 90px;
+          background-color: #ccc;
+          float: left;
+          position: absolute;
+          bottom: 0;
+          line-height: 110px;
+          text-align: center;
+          p {
+            color: $color-main;
+            font-size: $fontSize-text;
+          }
+        }
+        .name {
+          width: 60%;
+          height: 45px;
+          position: absolute;
+          @include color-main();
+          top: 215px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          line-height: 45px;
+          text-align: center;
+          p {
+            font-size: $fontSize-subtitle;
             letter-spacing: 5px;
             color: #ffffff;
-            font-size: $fontSize-text;
-            text-align: center;
-            padding: 15px 20px;
-            float: left;
-            margin: 10px 0;
-          }
-          #turtle_btn {
-            @include color-orange();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-          #smog_btn {
-            @include color-gray();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-          #coral_btn {
-            @include color-pink();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-          #rainforest_btn {
-            @include color-green();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-          #oil_btn {
-            @include color-sea();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
-          }
-          #plastic_btn {
-            @include color-blue();
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-            }
           }
         }
-        .topic_conclusion {
-          width: 100%;
-          padding: 35px 0;
-          margin: 10px 0;
-          // height: 30%;
-          float: left;
-          // position: absolute;
-          // top: 70%;
-          .conclusion {
-            margin: 0 auto;
-            width: 70%;
-            // height: 100%;
-            .conclusion_title {
-              padding: 10px 0;
-              text-align: left;
-              color: #ffffff;
-              font-size: $fontSize-subtitle;
-              letter-spacing: 5px;
-            }
-            .conclusion_content {
-              text-align: left;
-              color: #ffffff;
-              font-size: $fontSize-text;
-              line-height: 2;
-              text-align: justify;
-              text-justify: distribute;
-            }
+        @media screen and(max-width:1080px) {
+          & {
+            width: 45%;
+            margin: 30px 2% 0 2.5%;
           }
         }
-        #turtle_conclusion {
-          @include color-orange();
-        }
-        #smog_conclusion {
-          @include color-gray();
-        }
-        #coral_conclusion {
-          @include color-pink();
-        }
-        #rainforest_conclusion {
-          @include color-green();
-        }
-        #oil_conclusion {
-          @include color-sea();
-        }
-        #plastic_conclusion {
-          @include color-blue();
-        }
-      }
-      .group {
-        width: 100%;
-        height: 100vh;
-        .member {
-          width: 27%;
-          height: 325px;
-          background-color: #ffffff;
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-          position: relative;
-          float: left;
-          margin: 30px 3% 0 3.3%;
-          .pic {
+        @media screen and(max-width:600px) {
+          & {
             width: 90%;
-            height: 180px;
-            margin: 20px 5% 30px 5%;
-            float: left;
-          }
-          .info {
-            width: 100%;
-            height: 90px;
-            background-color: #ccc;
-            float: left;
-            position: absolute;
-            bottom: 0;
-            line-height: 110px;
-            text-align: center;
-            p {
-              color: $color-main;
-              font-size: $fontSize-text;
-            }
-          }
-          .name {
-            width: 60%;
-            height: 45px;
-            position: absolute;
-            @include color-main();
-            top: 215px;
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
-            line-height: 45px;
-            text-align: center;
-            p {
-              font-size: $fontSize-subtitle;
-              letter-spacing: 5px;
-              color: #ffffff;
-            }
+            margin: 30px 4% 0 6%;
           }
         }
       }
-      .footer {
-        width: 100%;
-        height: 130px;
-        background-color: $color-main;
-        float: left;
-        text-align: center;
-        line-height: 130px;
-        font-size: 25px;
-        color: #ffffff;
+    }
+    .footer {
+      width: 100%;
+      height: 100px;
+      @include color-main();
+      font-size: $fontSize-text;
+      float: left;
+      text-align: center;
+      line-height: 100px;
+      color: #ffffff;
+      .addCol {
+        display: none;
       }
-      .effort {
-        width: 100%;
-        margin: 0 0 50px 0;
-        padding: 50px 0 0 0;
-        float: left;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.9;
-        background-attachment: fixed;
-        .effort_title {
-          width: 90%;
-          margin: 0 5%;
-          color: #fff;
-          font-size: $fontSize-subtitle;
-          padding: 20px 0;
-          letter-spacing: 5px;
-          text-shadow: 1px 1px 2px $color-main;
-        }
-        .effort_title_r {
-          text-align: right;
-        }
-        .effort_title_l {
-          text-align: left;
-        }
-        .effort_content {
-          width: 70%;
-          padding: 30px;
+      @media screen and(max-width:550px) {
+        & {
+          height: 80px;
+          padding-top: 20px;
           line-height: 2;
-          background-color: rgba(255, 255, 255, 1);
-          p {
-            font-size: $fontSize-text;
-            text-align: justify;
-            text-justify: distribute;
+          .addCol {
+            display: block;
           }
         }
-        .effort_content_r {
-          margin: 0 0 0 auto;
-          float: right;
-          border-top-left-radius: 40px;
+      }
+    }
+    .effort {
+      width: 100%;
+      margin: 0 0 50px 0;
+      padding: 50px 0 0 0;
+      float: left;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+      background-attachment: fixed;
+      .effort_title {
+        width: 90%;
+        margin: 0 5%;
+        color: #fff;
+        font-size: $fontSize-subtitle;
+        padding: 20px 0;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px 2px $color-main;
+      }
+      .effort_title_r {
+        text-align: right;
+      }
+      .effort_title_l {
+        text-align: left;
+      }
+      .effort_content {
+        width: 70%;
+        padding: 30px;
+        line-height: 2;
+        background-color: rgba(255, 255, 255, 1);
+        p {
+          font-size: $fontSize-text;
+          text-align: justify;
+          text-justify: distribute;
         }
-        .effort_content_l {
-          margin: 0 auto 0 0;
-          float: left;
-          border-top-right-radius: 40px;
-        }
       }
-      #coral50 {
-        background-image: url(../assets/sea.jpg);
+      .effort_content_r {
+        margin: 0 0 0 auto;
+        float: right;
+        border-top-left-radius: 40px;
       }
-      #europe {
-        background-image: url(../assets/plastic.jpg);
+      .effort_content_l {
+        margin: 0 auto 0 0;
+        float: left;
+        border-top-right-radius: 40px;
       }
-      #montreal {
-        background-image: url(../assets/globalwarming.jpg);
-      }
-      #beach {
-        background-image: url(../assets/beach.jpg);
-      }
-      #pollution {
-        background-image: url(../assets/airpollution.jpg);
+    }
+    #coral50 {
+      background-image: url(../assets/sea.jpg);
+    }
+    #europe {
+      background-image: url(../assets/plastic.jpg);
+    }
+    #montreal {
+      background-image: url(../assets/globalwarming.jpg);
+    }
+    #beach {
+      background-image: url(../assets/beach.jpg);
+    }
+    #pollution {
+      background-image: url(../assets/airpollution.jpg);
+    }
+    @media screen and(max-width:1080px) {
+      & {
+        width: 100%;
       }
     }
   }
 }
-
 @-webkit-keyframes earth-Rotate {
   from {
     -webkit-transform: rotate(0deg);

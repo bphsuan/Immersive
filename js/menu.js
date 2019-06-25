@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  menuToggle();
+  windowResize();
   var def_menu = $(".menu").offset().top;
   var scroll = false;
   $(window).scroll(function () {
@@ -26,7 +28,33 @@ $(document).ready(function () {
     });
   });
 });
-
+function windowResize() {
+  $(window).resize(function () {
+    var windowWidth = $(window).width();
+    console.log(windowWidth);
+    if (windowWidth > 1080) {
+      $(".hamburger1").css("display", "none");
+      $(".hamburger2").css("display", "none");
+    }
+    else {
+      $(".hamburger1").css("display", "block");
+      $(".hamburger2").css("display", "none");
+      $(".rwdMenu").css({ left: "-300px" });
+    }
+  });
+};
+function menuToggle() {
+  $(".hamburger1").mousedown(function () {
+    $(".rwdMenu").animate({ left: "0px" });
+    $(".hamburger1").css("display", "none");
+    $(".hamburger2").css("display", "block");
+  });
+  $(".hamburger2").mousedown(function () {
+    $(".rwdMenu").animate({ left: "-300px" });
+    $(".hamburger2").css("display", "none");
+    $(".hamburger1").css("display", "block");
+  });
+}
 //向下滑動的錨點
 $(function () {
   $('a[href*="#"]:not([href="#"])').click(function () {

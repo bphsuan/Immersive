@@ -61,7 +61,6 @@ $transition: all 0.5s;
     text-decoration: none;
   }
 }
-
 .container {
   width: 100%;
   overflow: hidden;
@@ -75,9 +74,38 @@ $transition: all 0.5s;
         display: inline-block;
         float: left;
         list-style: none;
-        img {
-          width: 100vw;
+        width: 100vw;
+        height: 100vh;
+        .header_bg {
+          width: 100%;
           height: 100vh;
+          background-repeat: no-repeat;
+          background-size: 100vw 100vh;
+          text-align: center;
+          p {
+            font-size: $fontSize-subtitle;
+            color: #ffffff;
+            text-shadow: 0px 0px 3px $color-main;
+            font-weight: bold;
+            letter-spacing: 3px;
+          }
+          .pic_t1 {
+            padding-top: 5%;
+            padding-right: 10%;
+          }
+          .pic_t2 {
+            margin-top: 0.5%;
+            padding-left: 10%;
+          }
+        }
+        #bg1 {
+          background-image: url(../assets/bg01.jpg);
+        }
+        #bg2 {
+          background-image: url(../assets/bg02.jpg);
+        }
+        #bg3 {
+          background-image: url(../assets/bg03.jpg);
         }
       }
     }
@@ -91,9 +119,8 @@ $transition: all 0.5s;
         margin: 0 auto;
       }
       embed {
-        margin-top: 60px;
-        margin-bottom: 30px;
-        width: 32vw;
+        margin: 200px 0px 0px 60px;
+        width: 25vw;
         height: auto;
         -webkit-animation: earth-Rotate 5s infinite linear;
         -moz-animation: earth-Rotate 5s infinite linear;
@@ -126,13 +153,36 @@ $transition: all 0.5s;
     width: 100%;
     overflow: hidden;
     .menu {
-      width: 16%;
+      width: 17%;
       height: 100vh;
-      padding: 20px 2%;
+      overflow: scroll;
+      padding: 20px 1.5%;
       float: left;
       line-height: 1.5;
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       z-index: 10;
+      display: block;
+      @media screen and(max-height:850px) {
+        & {
+          line-height: 1.25;
+        }
+      }
+      @media screen and(max-width:1080px) {
+        & {
+          display: none;
+        }
+      }
+      @media screen and(max-width:1200px) {
+        & {
+          width: 18%;
+          padding: 20px 1%;
+        }
+        @media screen and(max-height:850px) {
+          & {
+            line-height: 1.5;
+          }
+        }
+      }
       img {
         width: 100%;
         height: auto;
@@ -142,13 +192,18 @@ $transition: all 0.5s;
         font-weight: 500;
         a {
           color: #aaa;
-          letter-spacing: 1px;
         }
         .big {
           color: #aaa;
           font-size: $fontSize-subtitle * 0.9;
           list-style: none;
           margin-top: 10px;
+          letter-spacing: 1px;
+          @media screen and(max-width:1200px) {
+            & {
+              font-size: $fontSize-subtitle * 0.8;
+            }
+          }
           i {
             margin-right: 15px;
             font-size: $fontSize-text * 0.9;
@@ -161,6 +216,61 @@ $transition: all 0.5s;
           margin-top: 10px;
           margin-left: 10%;
           list-style: none;
+          letter-spacing: 1px;
+          @media screen and(max-width:1200px) {
+            & {
+              font-size: $fontSize-text * 0.8;
+              margin-left: 5%;
+              letter-spacing: 0;
+            }
+          }
+          i {
+            margin-right: 15px;
+            font-size: $fontSize-text * 0.5;
+          }
+        }
+      }
+    }
+    .menu_rwd {
+      width: 300px;
+      height: 100vh;
+      padding: 10px 1.5%;
+      line-height: 1.5;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      display: block;
+      position: fixed;
+      top:0;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+      }
+      ul {
+        font-weight: 500;
+        a {
+          color: #aaa;
+        }
+        .big {
+          color: #aaa;
+          font-size: $fontSize-subtitle * 0.9;
+          list-style: none;
+          margin-top: 10px;
+          letter-spacing: 1px;
+          i {
+            margin-right: 15px;
+            font-size: $fontSize-text * 0.9;
+          }
+        }
+        .small {
+          color: #aaa;
+          font-size: $fontSize-text;
+          list-style: none;
+          margin-top: 10px;
+          margin-left: 10%;
+          list-style: none;
+          letter-spacing: 1px;
           i {
             margin-right: 15px;
             font-size: $fontSize-text * 0.5;
@@ -221,11 +331,6 @@ $transition: all 0.5s;
               transform-origin: 100% 10%;
               opacity: 1;
             }
-            img {
-              width: 500px;
-              height: auto;
-              border: none;
-            }
           }
         }
         p {
@@ -268,12 +373,24 @@ $transition: all 0.5s;
           width: 50%;
           // height: 70%;
           float: left;
-          #turtlePic {
+          .t_pic {
             width: 80%;
             height: 300px;
             margin: 0 auto;
             padding-top: 80px;
-            vertical-align: middle;
+            position: relative;
+            img {
+              width: 80%;
+              padding: 0px 10%;
+              height: auto;
+              border: none;
+              position: absolute;
+              bottom: 0;
+            }
+            #cruise {
+              width: 50%;
+              padding: 0px 25%;
+            }
           }
         }
 
@@ -477,6 +594,16 @@ $transition: all 0.5s;
           }
         }
       }
+      .footer {
+        width: 100%;
+        height: 130px;
+        background-color: $color-main;
+        float: left;
+        text-align: center;
+        line-height: 130px;
+        font-size: 25px;
+        color: #ffffff;
+      }
       .effort {
         width: 100%;
         margin: 0 0 50px 0;
@@ -512,27 +639,6 @@ $transition: all 0.5s;
             text-align: justify;
             text-justify: distribute;
           }
-          .effort_btn {
-            border-radius: 30px;
-            letter-spacing: 5px;
-            color: #ffffff;
-            @include color-main();
-            font-size: $fontSize-text;
-            text-align: center;
-            padding: 15px 20px;
-            margin: 20px 5%;
-            transition: $transition;
-            &:hover {
-              opacity: 0.8;
-              cursor: pointer;
-            }
-          }
-          .effort_btn_r {
-            float: right;
-          }
-          .effort_btn_ {
-            float: left;
-          }
         }
         .effort_content_r {
           margin: 0 0 0 auto;
@@ -550,6 +656,20 @@ $transition: all 0.5s;
       }
       #europe {
         background-image: url(../assets/plastic.jpg);
+      }
+      #montreal {
+        background-image: url(../assets/globalwarming.jpg);
+      }
+      #beach {
+        background-image: url(../assets/beach.jpg);
+      }
+      #pollution {
+        background-image: url(../assets/airpollution.jpg);
+      }
+      @media screen and(max-width:1080px) {
+        & {
+          width: 100%;
+        }
       }
     }
   }

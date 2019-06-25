@@ -1,7 +1,17 @@
 var total = $('.header ul li').length;
 var current = 1;
 var windows_width = window.innerWidth;
-displaypic(current);
+var windows_height = window.innerHeight;
+$(document).ready(function () {
+  $('.header ul').css({ "width": windows_width * 3 + "px" });
+  $(window).resize(function () {
+    windows_width = window.innerWidth;
+    $('.header ul').removeAttr("style");
+    $('.header ul').css({ "width": windows_width * 3 + "px" });
+  });
+  displaypic(current);
+});
+
 function displaypic(pic) {
   if (current < total) {
     var left = $('.slider_header').css("margin-left");

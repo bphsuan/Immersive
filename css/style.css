@@ -636,62 +636,72 @@
         background: -moz-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
         background: -webkit-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%);
         background: -o-linear-gradient(55deg, #668cb8 24%, #0b2f51 81%); }
-    .container .topic .group {
-      width: 100%;
-      height: 100vh; }
-      .container .topic .group .member {
-        width: 27%;
-        height: 325px;
-        background-color: #ffffff;
-        -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-        position: relative;
+    .container .topic .idea {
+      width: 100%; }
+      .container .topic .idea .idea_pic {
+        width: 30%;
+        height: 200px;
+        margin: 20px 5% 30px 5%;
+        background-image: url(../assets/member.jpg);
+        background-size: cover;
+        background-position: center;
         float: left;
-        margin: 30px 3% 0 3.3%; }
+        position: relative; }
+        .container .topic .idea .idea_pic p {
+          position: absolute;
+          bottom: 5%;
+          right: 3%;
+          color: #ffffff;
+          font-size: 18px;
+          letter-spacing: 5px; }
+      .container .topic .idea .idea_content {
+        width: 55%;
+        height: 200px;
+        float: left;
+        margin: 28px 5% 28px 0%; }
+    .container .topic .group {
+      width: 100%; }
+      .container .topic .group .member {
+        width: 48%;
+        margin: 3% 1% 3% 1%;
+        float: left; }
         .container .topic .group .member .pic {
-          width: 90%;
-          height: 180px;
-          margin: 20px 5% 30px 5%;
-          float: left; }
-        .container .topic .group .member .info {
-          width: 100%;
-          height: 90px;
-          background-color: #ccc;
+          width: 40%;
           float: left;
-          position: absolute;
-          bottom: 0;
-          line-height: 110px;
-          text-align: center; }
-          .container .topic .group .member .info p {
-            color: #343434;
-            font-size: 18px; }
-        .container .topic .group .member .name {
-          width: 60%;
-          height: 45px;
-          position: absolute;
-          background: -webkit-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          background: -o-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          background: linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          background: -moz-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          background: -webkit-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          background: -o-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
-          top: 215px;
-          border-top-right-radius: 50px;
-          border-bottom-right-radius: 50px;
-          line-height: 45px;
-          text-align: center; }
-          .container .topic .group .member .name p {
-            font-size: 28px;
-            letter-spacing: 5px;
-            color: #ffffff; }
-        @media screen and (max-width: 1080px) {
-          .container .topic .group .member {
-            width: 45%;
-            margin: 30px 2% 0 2.5%; } }
-        @media screen and (max-width: 600px) {
-          .container .topic .group .member {
+          background-color: #eeeeee; }
+          .container .topic .group .member .pic img {
             width: 90%;
-            margin: 30px 4% 0 6%; } }
+            height: 200px;
+            margin: 20px 0% 30px 5%; }
+        .container .topic .group .member .info {
+          width: 50%;
+          float: left; }
+          .container .topic .group .member .info .tit {
+            margin-top: 3%;
+            margin-bottom: 3%; }
+            .container .topic .group .member .info .tit span {
+              padding: 2% 5% 2% 5%;
+              background-color: #777777;
+              border-radius: 50px;
+              color: #ffffff; }
+          .container .topic .group .member .info .name {
+            width: 60%;
+            background: -webkit-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -moz-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -webkit-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            background: -o-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            line-height: 55px;
+            text-align: center; }
+            .container .topic .group .member .info .name p {
+              font-size: 28px;
+              letter-spacing: 5px;
+              color: #ffffff; }
+      .container .topic .group #teacher {
+        margin-left: 25%; }
     .container .topic .footer {
       width: 100%;
       height: 100px;

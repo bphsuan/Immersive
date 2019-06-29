@@ -11,10 +11,13 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <link href="./css/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="./css/css-loader.css">
 </head>
 
+
 <body>
+  <!-- Loader -->
+  <div class="se-pre-con"></div>
   <div class="container">
     <div class="header">
       <ul class="slider_header">
@@ -489,13 +492,19 @@
       </div>
     </div>
   </div>
-
-  <!-- <script type="text/javascript" src="js/index.js"></script> -->
   <script type="text/javascript" src="js/slider.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/carousel.js"></script>
-  <script>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+    //paste this code under the head tag or in a separate js file.
+    // Wait for window load
+    $(window).load(function () {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");
+    });
   </script>
 </body>
 

@@ -8,6 +8,7 @@ $(document).ready(function () {
     windows_width = window.innerWidth;
     $('.header ul').removeAttr("style");
     $('.header ul').css({ "width": windows_width * 3 + "px" });
+    current = 1;
   });
   displaypic(current);
 });

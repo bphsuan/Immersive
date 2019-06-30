@@ -8,6 +8,7 @@ $(document).ready(function () {
     windows_width = window.innerWidth;
     $('.header ul').removeAttr("style");
     $('.header ul').css({ "width": windows_width * 3 + "px" });
+    current = 1;
   });
   displaypic(current);
 });
@@ -15,13 +16,13 @@ $(document).ready(function () {
 function displaypic(pic) {
   if (current < total) {
     var left = $('.slider_header').css("margin-left");
-    $('.slider_header').animate({ "margin-left": parseInt(left) - windows_width }, 2000);
+    $('.slider_header').animate({ "margin-left": parseInt(left) - windows_width }, 6000);
     current = current + 1;
-    setTimeout(function () { displaypic(current) }, 5000);
+    setTimeout(function () { displaypic(current) }, 6000);
   } else {
-    $('.slider_header').animate({ "margin-left": 0 + "px" }, 2000);
+    $('.slider_header').animate({ "margin-left": 0 + "px" }, 6000);
     current = 1;
-    setTimeout(function () { displaypic(current) }, 5000);
+    setTimeout(function () { displaypic(current) }, 6000);
   }
 
 }

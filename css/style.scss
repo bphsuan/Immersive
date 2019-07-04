@@ -49,7 +49,7 @@ $color-blue: rgb(14, 61, 105);
 }
 $fontFamily: sans-serif, Microsoft JhengHei;
 $fontSize-title: 36px;
-$fontSize-subtitle: 28px;
+$fontSize-subtitle: 26px;
 $fontSize-text: 18px;
 $shadow: 3px 3px 3px #ccc;
 $transition: all 0.5s;
@@ -527,10 +527,12 @@ $transition: all 0.5s;
         }
         .t_pic {
           width: 80%;
-          height: 300px;
-          margin: 0 auto;
-          padding-top: 80px;
+          height: 350px;
+          margin: 60px auto 0 auto;
           position: relative;
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
           @media screen and(max-width:500px) {
             & {
               height: 250px;
@@ -543,48 +545,23 @@ $transition: all 0.5s;
               padding-top: 0px;
             }
           }
-          img {
-            width: 80%;
-            padding: 0px 10%;
-            margin: 0;
-            height: auto;
-            border: none;
-            position: absolute;
-            bottom: 0;
-            float: left;
-            @media screen and(max-width:768px) {
-              & {
-                width: 60%;
-                padding: 0px 20%;
-              }
-            }
-          }
-          .shortPic {
-            width: 85%;
-            padding: 0px 7.5%;
-            @media screen and(max-width:768px) {
-              & {
-                width: 80%;
-                padding: 0px 10%;
-              }
-            }
-          }
-          .highPic {
-            width: 50%;
-            padding: 0px 25%;
-            @media screen and(max-width:1080px) {
-              & {
-                width: 60%;
-                padding: 0px 20%;
-              }
-            }
-            @media screen and(max-width:768px) {
-              & {
-                width: 40%;
-                padding: 0px 30%;
-              }
-            }
-          }
+          // img {
+          //   width: 80%;
+          //   padding: 0px 10%;
+          //   margin: 0;
+          //   height: auto;
+          //   border: none;
+          //   position: absolute;
+          //   bottom: 0;
+          //   float: left;
+
+          //   @media screen and(max-width:768px) {
+          //     & {
+          //       width: 60%;
+          //       padding: 0px 20%;
+          //     }
+          //   }
+          // }
         }
       }
 
@@ -754,94 +731,268 @@ $transition: all 0.5s;
     }
     .idea {
       width: 100%;
-      .idea_pic {
-        width: 30%;
-        height: 200px;
-        margin: 20px 5% 30px 5%;
-        background-image: url(../assets/member.jpg);
-        background-size: cover;
-        background-position: center;
+      padding: 35px 0;
+      float: left;
+      position: relative;
+      @include color-main();
+      .idea_container {
+        width: 49%;
+        border-right: 2px solid #ffffff;
+        border-bottom: none;
         float: left;
-        position: relative;
-        p {
-          position: absolute;
-          bottom: 5%;
-          right: 3%;
+        @media screen and(max-width:768px) {
+          & {
+            width: 100%;
+            border-bottom: 2px solid #ffffff;
+            border-right: none;
+          }
+        }
+        .idea_pic {
+          width: 90%;
+          height: 250px;
+          margin: 28px 5% 30px 5%;
+          background-image: url(../assets/teammember.jpg);
+          background-size: cover;
+          background-position: center center;
+          float: left;
+          position: relative;
+          @media screen and(max-width:768px) {
+            & {
+              height: 300px;
+            }
+          }
+          @media screen and(max-width:500px) {
+            & {
+              height: 250px;
+            }
+          }
+          p {
+            position: absolute;
+            bottom: 5%;
+            right: 3%;
+            color: #ffffff;
+            font-size: $fontSize-subtitle;
+            letter-spacing: 10px;
+          }
+        }
+        .idea_content {
+          width: 90%;
+          // height: 200px;
+          float: left;
+          margin: 28px 5% 28px 5%;
+          line-height: 2;
+          text-align: justify;
+          text-justify: distribute;
           color: #ffffff;
-          font-size: $fontSize-text;
-          letter-spacing: 5px;
         }
       }
-      .idea_content {
-        width: 55%;
-        height: 200px;
+      .design_container {
+        width: 50%;
         float: left;
-        margin: 28px 5% 28px 0%;
+        @media screen and(max-width:768px) {
+          & {
+            width: 100%;
+          }
+        }
+        .design_content {
+          width: 90%;
+          float: left;
+          margin: 28px 5% 28px 5%;
+          line-height: 2;
+          text-align: justify;
+          text-justify: distribute;
+          color: #ffffff;
+        }
+        .design_pic {
+          width: 90%;
+          height: 250px;
+          margin: 28px 5% 30px 5%;
+          background-image: url(../assets/design.jpg);
+          background-size: cover;
+          background-position: center center;
+          float: left;
+          position: relative;
+          @media screen and(max-width:768px) {
+            & {
+              height: 300px;
+            }
+          }
+          @media screen and(max-width:500px) {
+            & {
+              height: 250px;
+            }
+          }
+          p {
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            color: #ffffff;
+            font-size: $fontSize-subtitle;
+            letter-spacing: 10px;
+          }
+        }
       }
     }
     .group {
       width: 100%;
+      float: left;
       .member {
         width: 48%;
         margin: 3% 1% 3% 1%;
         float: left;
-        .pic {
-          width: 40%;
-          float: left;
-          background-color: #eeeeee;
-          img {
+        background-color: #ffffff;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        @media screen and(max-width:768px) {
+          & {
             width: 90%;
-            height: 200px;
-            margin: 20px 0% 30px 5%;
+            margin: 3% 5% 3% 5%;
           }
         }
         .info {
-          width: 50%;
+          width: 100%;
           float: left;
+          .pic {
+            width: 40%;
+            float: left;
+            background-color: #eeeeee;
+            @media screen and(max-width:500px) {
+              & {
+                width: 45%;
+              }
+            }
+            img {
+              width: 90%;
+              height: auto;
+              margin: 20px 5%;
+            }
+          }
           .tit {
-            // width: 35%;
-            // background-color: #777777;
-            // border-radius: 50px;
-            margin-top: 3%;
-            margin-bottom: 3%;
-            // line-height: 40px;
-            // text-align: center;
+            clear: both;
+            padding: 20px 5px;
+            @media screen and(max-width:400px) {
+              & {
+                padding: 20px 0px;
+              }
+            }
             span {
-              padding: 2% 5% 2% 5%;
+              height: 30px;
+              margin: 5px;
+              padding: 10px 15px;
+              line-height: 30px;
               background-color: #777777;
               border-radius: 50px;
               color: #ffffff;
+              font-size: $fontSize-text;
+              @media screen and(max-width:1024px) {
+                & {
+                  margin: 2.5px;
+                  padding: 10px 12px;
+                }
+              }
+              @media screen and(max-width:500px) {
+                & {
+                  font-size: $fontSize-text * 0.85;
+                }
+              }
+              @media screen and(max-width:400px) {
+                & {
+                  font-size: $fontSize-text * 0.8;
+                  margin: 1px 0px 1px 2px;
+                  padding: 8px;
+                }
+              }
             }
           }
-          .name {
-            width: 60%;
-            @include color-main();
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
-            line-height: 55px;
-            text-align: center;
+          .introduction {
+            height: 160px;
+            padding: 15px 10px;
+            clear: both;
+            @media screen and(max-width:1200px) {
+              & {
+                height: 200px;
+              }
+            }
+            @media screen and(max-width:1024px) {
+              & {
+                height: 240px;
+              }
+            }
+            @media screen and(max-width:768px) {
+              & {
+                height: 150px;
+              }
+            }
+            @media screen and(max-width:600px) {
+              & {
+                height: 180px;
+              }
+            }
+            @media screen and(max-width:500px) {
+              & {
+                height: 210px;
+              }
+            }
+            @media screen and(max-width:450px) {
+              & {
+                height: 240px;
+              }
+            }
+            @media screen and(max-width:400px) {
+              & {
+                height: 270px;
+              }
+            }
+            @media screen and(max-width:360px) {
+              & {
+                height: 300px;
+              }
+            }
             p {
-              font-size: $fontSize-subtitle;
-              letter-spacing: 5px;
-              color: #ffffff;
+              font-size: $fontSize-text;
+              line-height: 1.5;
+              text-align: justify;
+              text-justify: distribute;
+            }
+          }
+          .job {
+            width: 60%;
+            float: left;
+            @media screen and(max-width:500px) {
+              & {
+                width: 55%;
+              }
+            }
+            .name {
+              width: 55%;
+              margin: 15px 0;
+              margin-bottom: 5px;
+              @include color-main();
+              border-top-right-radius: 50px;
+              border-bottom-right-radius: 50px;
+              line-height: 45px;
+              text-align: center;
+              float: left;
+              @media screen and(max-width:500px) {
+                & {
+                  width: 65%;
+                }
+              }
+              p {
+                font-size: $fontSize-subtitle;
+                letter-spacing: 5px;
+                color: #ffffff;
+              }
             }
           }
         }
-        // @media screen and(max-width:1080px) {
-        //   & {
-        //     width: 45%;
-        //     margin: 30px 2% 0 2.5%;
-        //   }
-        // }
-        // @media screen and(max-width:600px) {
-        //   & {
-        //     width: 90%;
-        //     margin: 30px 4% 0 6%;
-        //   }
-        // }
       }
       #teacher {
         margin-left: 25%;
+        @media screen and(max-width:768px) {
+          & {
+            margin-left: 5%;
+          }
+        }
       }
     }
     .footer {
@@ -885,6 +1036,11 @@ $transition: all 0.5s;
         padding: 20px 0;
         letter-spacing: 5px;
         text-shadow: 1px 1px 2px $color-main;
+        @media screen and(max-width:500px) {
+          & {
+            font-size: $fontSize-subtitle * 0.9;
+          }
+        }
       }
       .effort_title_r {
         text-align: right;

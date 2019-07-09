@@ -890,9 +890,55 @@
       background-image: url(../assets/beach.jpg); }
     .container .topic #pollution {
       background-image: url(../assets/airpollution.jpg); }
+    .container .topic #doByself {
+      background-image: url(../assets/doByself.jpeg); }
     @media screen and (max-width: 1080px) {
       .container .topic {
         width: 100%; } }
+    .container .topic .reference {
+      width: 90%;
+      padding: 0 5% 25px 5%;
+      float: left; }
+      .container .topic .reference .per {
+        width: 80%;
+        height: 60px;
+        line-height: 60px;
+        float: left;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+        .container .topic .reference .per i {
+          margin-right: 10px;
+          font-size: 36px;
+          color: #343434;
+          float: left; }
+        .container .topic .reference .per span {
+          font-size: 18px;
+          color: #343434;
+          float: left; }
+      .container .topic .reference a {
+        width: 120px;
+        height: 40px;
+        margin: 10px 0;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 5px;
+        border-radius: 25px;
+        background: -webkit-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        background: -o-linear-gradient(35deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        background: linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        background: -moz-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        background: -webkit-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        background: -o-linear-gradient(55deg, #4a4b4c 18%, rgba(16, 15, 15, 0.9) 83%);
+        cursor: pointer;
+        color: #ffffff;
+        float: left; }
+        .container .topic .reference a:hover {
+          opacity: 0.9;
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
 
 @keyframes move {
   0% {

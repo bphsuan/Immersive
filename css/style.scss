@@ -1085,9 +1085,54 @@ $transition: all 0.5s;
     #pollution {
       background-image: url(../assets/airpollution.jpg);
     }
+    #doByself {
+      background-image: url(../assets/doByself.jpeg);
+    }
     @media screen and(max-width:1080px) {
       & {
         width: 100%;
+      }
+    }
+    .reference {
+      width: 90%;
+      padding: 0 5% 25px 5%;
+      float: left;
+      .per {
+        width: 80%;
+        height: 60px;
+        line-height: 60px;
+        float: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        i {
+          margin-right: 10px;
+          font-size: $fontSize-title;
+          color: $color-main;
+          float: left;
+        }
+        span {
+          font-size: $fontSize-text;
+          color: $color-main;
+          float: left;
+        }
+      }
+      a {
+        width: 120px;
+        height: 40px;
+        margin: 10px 0;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 5px;
+        border-radius: 25px;
+        @include color-main();
+        cursor: pointer;
+        color: #ffffff;
+        float: left;
+        &:hover {
+          opacity: 0.9;
+          transition: $transition;
+        }
       }
     }
   }

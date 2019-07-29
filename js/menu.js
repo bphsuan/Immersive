@@ -1,6 +1,9 @@
 $(document).ready(function () {
   menuToggle();
   windowResize();
+  setMenu();
+});
+function setMenu() {
   var def_menu = $(".menu").offset().top;
   var scroll = false;
   $(window).scroll(function () {
@@ -22,11 +25,21 @@ $(document).ready(function () {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       /* If the object is completely visible in the window, fade it it */
       if (bottom_of_window > bottom_of_object) {
-        $(this).animate({ 'opacity': '1' }, 2000);
+        $('.menu ul li a').each(function (i) {
+          var position = $(this).attr('href');
+          if (document.documentElement.scrollTop >= $(position).offset().top) {
+            $(".menu ul li a").css({ "color": "#9d9d9d" });
+            $(this).css({
+              "color": "#343434", "animation": "color 1s",
+              "-moz-animation": "color 1s", "-webkit-animation": "color 1s"
+            }).siblings().css({ "color": "#9d9d9d" });
+          }
+        });
+        $(this).animate({ 'opacity': '1' }, 1000);
       }
     });
   });
-});
+}
 function windowResize() {
   $(window).resize(function () {
     var windowWidth = $(window).width();
@@ -34,6 +47,7 @@ function windowResize() {
     if (windowWidth > 1080) {
       $(".hamburger1").css("display", "none");
       $(".hamburger2").css("display", "none");
+      // setMenu();
     }
     else {
       $(".hamburger1").css("display", "block");
@@ -63,7 +77,7 @@ $(function () {
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000);
+        }, 2000);
         return false;
       }
     }

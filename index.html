@@ -9,35 +9,33 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/partialviewslider.css">
   <link rel="stylesheet" href="./css/css-loader.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 
 <body>
   <!-- Loader -->
-  <div class="se-pre-con"></div>
+  <!-- <div class="se-pre-con"></div> -->
+  <div class="loading">
+    <img src="./assets/loading.gif">
+  </div>
   <div class="container">
     <div class="header">
-      <ul class="slider_header">
-        <li>
-          <div class="header_bg" id="bg1">
-            <p class="pic_t1">地球綠寶藏，保護我好嗎?</p>
-            <p class="pic_t2">孕育生態系，我就是個家!</p>
-          </div>
+      <ul id="partial-view">
+        <li style="background-image: url('./assets/bg01.jpg')">
+          <p class="pic_t1 animated infinite slow pulse">地球綠寶藏，保護我好嗎?</p>
+          <p class="pic_t2 animated infinite slow pulse">孕育生態系，我就是個家!</p>
         </li>
-        <li>
-          <div class="header_bg" id="bg2">
-            <p class="pic_t1">冰層融了話，我又該住哪?</p>
-            <p class="pic_t2">地球出浩劫，不該警醒嗎?</p>
-          </div>
+        <li style="background-image: url('./assets/bg02.jpg')">
+          <p class="pic_t1 animated infinite slow pulse">冰層融了話，我又該住哪?</p>
+          <p class="pic_t2 animated infinite slow pulse">地球出浩劫，不該警醒嗎?</p>
         </li>
-        <li>
-          <div class="header_bg" id="bg3">
-            <p class="pic_t1">空污變殺手，人人皆弱勢!</p>
-            <p class="pic_t2">萬人齊努力，就有一曙光!</p>
-          </div>
+        <li style="background-image: url('./assets/bg03.jpg')">
+          <p class="pic_t1 animated infinite slow pulse">空污變殺手，人人皆弱勢!</p>
+          <p class="pic_t2 animated infinite slow pulse">萬人齊努力，就有一曙光!</p>
         </li>
       </ul>
       <div class="earth">
@@ -103,24 +101,7 @@
         <a id="summary"></a>
         <div class="summary">
           <div class="box">
-            <!-- <div class="list">
-              <ul>
-                <li class="p5"><a href="#"><img src="./assets/Carousel1.jpg" alt="" /></a></li>
-                <li class="p4"><a href="#"><img src="./assets/Carousel2.jpg" alt="" /></a></li>
-                <li class="p3"><a href="#"><img src="./assets/Carousel3.jpg" alt="" /></a></li>
-                <li class="p2"><a href="#"><img src="./assets/Carousel4.jpg" alt="" /></a></li>
-                <li class="p1"><a href="#"><img src="./assets/Carousel5.jpg" alt="" /></a></li>
-              </ul>
-            </div> -->
           </div>
-          <!-- <p>人因自然而生，人與自然是生命共同體，人類對大自然的傷害最終會傷及人類自身。
-            本團隊期望以人類發展對環境造成的影響為主軸，透過真實案例探討以前人們自私
-            的開發行為所造成的危害，衍生至後續的環境生態問題，使人們省思自身的行為，
-            提倡對於環境保護應該有的高度重視。過去人們認為資源是「取之不盡、用之不竭」
-            ，然而這樣的想法從種種的天災與案例上已可以看見大自然反撲的力量，也讓人類嘗
-            到嚴重的惡果。因此本團隊希望透過系統的呈現能夠鼓勵人們加強生態保育並且改變
-            對環境造成傷害的生活習慣。相信日常生活中只要有一些小小的改變，就可以對地球
-            有大大的貢獻。讓我們好好保護孕育我們的地球，可以永續地經營下去吧!</p> -->
         </div>
         <a class="section" id="section0"></a>
         <div class="title">
@@ -131,7 +112,6 @@
           <a class="section" id="section1"></a>
           <div class="topic_pic">
             <div class="t_pic" style="background-image: url(../assets/turtle.svg);">
-              <!-- <img src="./assets/turtle.svg" /> -->
             </div>
           </div>
           <div class="topic_content">
@@ -159,7 +139,6 @@
           <a class="section" id="section2"></a>
           <div class="topic_pic">
             <div class="t_pic" style="background-image: url(../assets/city.svg);">
-              <!-- <img src="./assets/city.svg" /> -->
             </div>
           </div>
           <div class="topic_content">
@@ -191,7 +170,6 @@
           <a class="section" id="section3"></a>
           <div class="topic_pic">
             <div class="t_pic" style="background-image: url(../assets/coral.svg);">
-              <!-- <img src="./assets/coral.svg" /> -->
             </div>
           </div>
           <div class="topic_content">
@@ -219,7 +197,6 @@
           <a class="section" id="section4"></a>
           <div class="topic_pic">
             <div class="t_pic" style="background-image: url(../assets/rainforest.svg);">
-              <!-- <img src="./assets/rainforest.svg" /> -->
             </div>
           </div>
           <div class="topic_content">
@@ -252,7 +229,6 @@
           <a class="section" id="section5"></a>
           <div class="topic_pic">
             <div class="t_pic" style="background-image: url(../assets/cruise.svg);">
-              <!-- <img src="./assets/cruise.svg" /> -->
             </div>
           </div>
           <div class="topic_content">
@@ -376,14 +352,63 @@
             <p class="effort_text">
               從上面生態破壞的案例看到了，地球已被我們追求科技、追求更好的生活環境，破壞的傷痕累累，而人類也受到了不少反撲，因此開始重視生態的保育，國際議定書、國家政策、大型淨灘計畫等等，這些活動我們似乎很難樣樣去參與，但其實這樣無妨，生活中只要記得一些小舉動，我們每天都可以愛地球、減少破壞喔！
               <br />
-              <i class="fas fa-lightbulb"></i>&nbsp;隨少關燈、關電源<br />
-              <i class="far fa-lightbulb"></i>&nbsp;冷氣定時並控制溫度在26度C以上<br />
-              <i class="fas fa-lightbulb"></i>&nbsp;使用環保餐具、環保吸管<br />
-              <i class="far fa-lightbulb"></i>&nbsp;自備購物袋，盡量避免使用一次性塑膠袋<br />
-              <i class="fas fa-lightbulb"></i>&nbsp;淘汰老舊家電，使用節能家電<br />
-              <i class="far fa-lightbulb"></i>&nbsp;多搭乘大眾運輸工具，或駕駛節能認證的汽車<br />
-              <i class="fas fa-lightbulb"></i>&nbsp;企業應做好污水處理，並盡可能進行水資源循環再利用
             </p>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-plug"></i></div>
+                <div class="top"></div>
+                <div class="right">隨手關燈</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-wind"></i></div>
+                <div class="top"></div>
+                <div class="right">冷氣26度以上</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-utensils"></i></div>
+                <div class="top"></div>
+                <div class="right">使用環保餐具</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-shopping-bag"></i></div>
+                <div class="top"></div>
+                <div class="right">自備購物袋</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-leaf"></i></div>
+                <div class="top"></div>
+                <div class="right">使用節能家電</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-bus-alt"></i></div>
+                <div class="top"></div>
+                <div class="right">搭乘公車捷運</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-tint"></i></div>
+                <div class="top"></div>
+                <div class="right">做好污水處理</div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="front"><i class="fas fa-trash-alt"></i></div>
+                <div class="top"></div>
+                <div class="right">垃圾減量</div>
+              </div>
+            </div>
           </div>
         </div>
         <a class="section" id="section14"></a>
@@ -427,11 +452,6 @@
                   <span>指導老師</span>
                 </div>
               </div>
-              <!-- <div class="introduction">
-                <p>看著血淋淋的案例層出不窮，環境變遷下的生物悲歌，身為人類的我又怎能再坐視不管?我們所擁有的一切，都是基於這自然環境，讓我們
-                  能安心的生存。命才會有希望。」我秉持著這樣的信念，期許著每份努力都能為這個社會帶來改變。
-                </p>
-              </div> -->
             </div>
           </div>
           <div class="member">
@@ -526,108 +546,123 @@
           <p class="sub">Source</p>
         </div>
         <div class="reference">
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>freepik</span>
-          </div>
-          <a href="https://www.freepik.com">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>Unsplash</span>
-          </div>
-          <a href="https://unsplash.com">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>汪仁傑(2016)，海龜要回家─淺談台灣海洋危機。</span>
-          </div>
-          <a href="https://www.natgeomedia.com/environment/article/content-5585.html">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>謝曙霞(2019)。老家變機場！綠蠵龜跑道產卵讓人心碎。</span>
-          </div>
-          <a href="https://e-info.org.tw/node/217461">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>白墨(2015)。觀察：中國大城市空氣污染源究竟哪來？</span>
-          </div>
-          <a href="https://www.bbc.com/zhongwen/trad/china/2015/04/150401_china_9_cities_environmentnt">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>王紅晨(2016)。霧霾對身體的危害竟是這麼大！</span>
-          </div>
-          <a href="https://kknews.cc/zh-tw/health/38nge3o.html">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>夏燁，丹妮(2016)。聯合國兒童基金會：每年有60萬幼童死於空氣污染。</span>
-          </div>
-          <a href="https://kknews.cc/world/oyyxlnp.html">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>Steven Lee Myers(2018)。中國霧霾新元兇：甲醛。</span>
-          </div>
-          <a href="https://cn.nytimes.com/china/20181019/china-pollution-formaldehyde-sulfur/zh-hant/">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>蔡宗憲(2016)。墾丁珊瑚大量白化 17年來最嚴重一次。</span>
-          </div>
-          <a href="https://news.ltn.com.tw/news/life/breakingnews/1777228">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>魏國金(2018)。暖化煞不住 全球珊瑚5倍速白化</span>
-          </div>
-          <a href="https://news.ltn.com.tw/news/world/paper/1166344">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>端聞(2015)。2050年地球將失去印度大小的熱帶雨林。</span>
-          </div>
-          <a href="https://theinitium.com/article/20150826-dailynews-selva/">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>鄒敏惠(2016)。【海污事件簿】海上漏油怎麼一回事？ 互動地圖帶你看。</span>
-          </div>
-          <a href="https://e-info.org.tw/node/113801">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>鄒敏惠(2016)。【互動地圖】漏油對海洋有什麼影響？台灣如何應變？</span>
-          </div>
-          <a href="https://www.thenewslens.com/article/39195">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>鄒敏惠(2018)。墨灣漏油新發現：深海微生物一片死寂 重傷海洋命脈。</span>
-          </div>
-          <a href="https://e-info.org.tw/node/212578">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>杜貞儀(2017)。海上漏油頻傳，可以還給大自然乾淨嗎？</span>
-          </div>
-          <a href="https://blog.oceansays.info/2017/08/oilspill101.html">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span>大公網(2018)。日貝類首次發現大量微膠粒。</span>
-          </div>
-          <a href="http://www.takungpao.com.hk/international/text/2018/0620/177998.html">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span> shiuhk(2018)。人類糞便首次驗出微膠粒！估計全球一半人口自食其「膠」。</span>
-          </div>
-          <a
-            href="https://ezone.ulifestyle.com.hk/article/2192382/%E4%BA%BA%E9%A1%9E%E7%B3%9E%E4%BE%BF%E9%A6%96%E6%AC%A1%E9%A9%97%E5%87%BA%E5%BE%AE%E8%86%A0%E7%B2%92%EF%BC%81%E4%BC%B0%E8%A8%88%E5%85%A8%E7%90%83%E4%B8%80%E5%8D%8A%E4%BA%BA%E5%8F%A3%E8%87%AA%E9%A3%9F%E5%85%B6%E3%80%8C%E8%86%A0%E3%80%8D">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span> 吳志茵(2016)。【微膠粒污染】一支磨砂膏　足以危害海洋生態？</span>
-          </div>
-          <a
-            href="https://www.hk01.com/%E7%A4%BE%E5%8D%80%E5%B0%88%E9%A1%8C/13586/%E5%BE%AE%E8%86%A0%E7%B2%92%E6%B1%A1%E6%9F%93-%E4%B8%80%E6%94%AF%E7%A3%A8%E7%A0%82%E8%86%8F-%E8%B6%B3%E4%BB%A5%E5%8D%B1%E5%AE%B3%E6%B5%B7%E6%B4%8B%E7%94%9F%E6%85%8B">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span> 林昕慧(2018)。一艘只捕塑膠魚的海洋革命號。</span>
-          </div>
-          <a href="https://e-info.org.tw/node/212098">查看更多</a>
-          <div class="per">
-            <i class="fas fa-paper-plane"></i>
-            <span> 曾以寧(2017)。【愛知目標】「珊瑚礁50」拯救2050年前倖存者的全球倡議。</span>
-          </div>
-          <a href="https://e-info.org.tw/node/204583">查看更多</a>
+          <table>
+            <tbody>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>freepik</td>
+                <td class="moreBtn"><a href="https://www.freepik.com">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>Unsplash</td>
+                <td class="moreBtn"><a href="https://unsplash.com">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>汪仁傑(2016)，海龜要回家─淺談台灣海洋危機。</td>
+                <td class="moreBtn"><a href="https://www.natgeomedia.com/environment/article/content-5585.html">查看更多</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>謝曙霞(2019)。老家變機場！綠蠵龜跑道產卵讓人心碎。</td>
+                <td class="moreBtn"><a href="https://e-info.org.tw/node/217461">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>白墨(2015)。觀察：中國大城市空氣污染源究竟哪來？</td>
+                <td class="moreBtn"><a
+                    href="https://www.bbc.com/zhongwen/trad/china/2015/04/150401_china_9_cities_environmentnt">查看更多</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>王紅晨(2016)。霧霾對身體的危害竟是這麼大！</td>
+                <td class="moreBtn"><a href="https://kknews.cc/zh-tw/health/38nge3o.html">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>夏燁，丹妮(2016)。聯合國兒童基金會：每年有60萬幼童死於空氣污染。</td>
+                <td class="moreBtn"><a href="https://kknews.cc/world/oyyxlnp.html">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>Steven Lee Myers(2018)。中國霧霾新元兇：甲醛。</td>
+                <td class="moreBtn"><a
+                    href="https://cn.nytimes.com/china/20181019/china-pollution-formaldehyde-sulfur/zh-hant/">查看更多</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>蔡宗憲(2016)。墾丁珊瑚大量白化 17年來最嚴重一次。</td>
+                <td class="moreBtn"><a href="https://news.ltn.com.tw/news/life/breakingnews/1777228">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>魏國金(2018)。暖化煞不住 全球珊瑚5倍速白化</td>
+                <td class="moreBtn"><a href="https://news.ltn.com.tw/news/world/paper/1166344">查看更多</a></td>
+              </tr>
+              <tr>
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>端聞(2015)。2050年地球將失去印度大小的熱帶雨林。</td>
+                <td class="moreBtn"><a href="https://theinitium.com/article/20150826-dailynews-selva/">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>鄒敏惠(2016)。【海污事件簿】海上漏油怎麼一回事？ 互動地圖帶你看。</td>
+                <td class="moreBtn"><a href="https://e-info.org.tw/node/113801">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>鄒敏惠(2016)。【互動地圖】漏油對海洋有什麼影響？台灣如何應變？</td>
+                <td class="moreBtn"><a href="https://www.thenewslens.com/article/39195">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>鄒敏惠(2018)。墨灣漏油新發現：深海微生物一片死寂 重傷海洋命脈。</td>
+                <td class="moreBtn"><a href="https://e-info.org.tw/node/212578">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>杜貞儀(2017)。海上漏油頻傳，可以還給大自然乾淨嗎？</td>
+                <td class="moreBtn"><a href="https://blog.oceansays.info/2017/08/oilspill101.html">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i>大公網(2018)。日貝類首次發現大量微膠粒。</td>
+                <td class="moreBtn"><a
+                    href="http://www.takungpao.com.hk/international/text/2018/0620/177998.html">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> shiuhk(2018)。人類糞便首次驗出微膠粒！估計全球一半人口自食其「膠」。</td>
+                <td class="moreBtn"><a
+                    href="https://ezone.ulifestyle.com.hk/article/2192382/%E4%BA%BA%E9%A1%9E%E7%B3%9E%E4%BE%BF%E9%A6%96%E6%AC%A1%E9%A9%97%E5%87%BA%E5%BE%AE%E8%86%A0%E7%B2%92%EF%BC%81%E4%BC%B0%E8%A8%88%E5%85%A8%E7%90%83%E4%B8%80%E5%8D%8A%E4%BA%BA%E5%8F%A3%E8%87%AA%E9%A3%9F%E5%85%B6%E3%80%8C%E8%86%A0%E3%80%8D">查看更多</a>
+                </td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 吳志茵(2016)。【微膠粒污染】一支磨砂膏　足以危害海洋生態？</td>
+                <td class="moreBtn"><a
+                    href="https://www.hk01.com/%E7%A4%BE%E5%8D%80%E5%B0%88%E9%A1%8C/13586/%E5%BE%AE%E8%86%A0%E7%B2%92%E6%B1%A1%E6%9F%93-%E4%B8%80%E6%94%AF%E7%A3%A8%E7%A0%82%E8%86%8F-%E8%B6%B3%E4%BB%A5%E5%8D%B1%E5%AE%B3%E6%B5%B7%E6%B4%8B%E7%94%9F%E6%85%8B">查看更多</a>
+                </td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 林昕慧(2018)。一艘只捕塑膠魚的海洋革命號。</td>
+                <td class="moreBtn"><a href="https://e-info.org.tw/node/212098">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 曾以寧(2017)。【愛知目標】「珊瑚礁50」拯救2050年前倖存者的全球倡議。</td>
+                <td class="moreBtn"><a href="https://e-info.org.tw/node/204583">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 趨勢分析(2019)。歐盟新塑膠回收政策。</td>
+                <td class="moreBtn"><a
+                    href="https://www.sdgs-csr.org/tw/knowledge/trend-analysis/312-10703trend06.html">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 陳博臻(2016)。減緩全球暖化《蒙特婁議定書》決議淘汰氫氟碳化物。</td>
+                <td class="moreBtn"><a href="https://www.upmedia.mg/news_info.php?SerialNo=5792">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> 林依霖(2018)。為什麼撿垃圾還要寫紀錄?簡介ICC 國際淨灘 – 世上最大規模志工行動。
+                </td>
+                <td class="moreBtn"><a href="https://agooday.com/archives/56027">查看更多</a></td>
+              </tr>
+              <tr class="dataHide">
+                <td class="dataTit"><i class="fas fa-paper-plane"></i> MICHAEL GREENSTONE(2018)。治理空氣污染迅速見效，中國是怎麼做到的？
+                </td>
+                <td class="moreBtn"><a
+                    href="https://cn.nytimes.com/china/20180313/china-pollution-environment-longer-lives/zh-hant/">查看更多</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="dataApear dataDisplay">More<br /><i class="fas fa-angle-double-down"></i></button>
+          <button class="dataDispear dataDisplay"><i class="fas fa-angle-double-up"><br />Hide</i></button>
         </div>
         <div class="footer">
           國立臺中科技大學 姜Lab <br class="addCol" />Immersive 身臨其境 &copy; 2019
@@ -635,20 +670,17 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="js/slider.js"></script>
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/carousel.js"></script>
+  <script type="text/javascript" src="js/partialviewslider.js"></script>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
   <script>
-    //paste this code under the head tag or in a separate js file.
-    // Wait for window load
-    $(window).load(function () {
-      // Animate loader off screen
-      $(".se-pre-con").fadeOut("slow");
-      $('html,body').animate({ scrollTop: 0 }, 100);
-    });
+
   </script>
 </body>
 

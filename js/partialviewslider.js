@@ -41,8 +41,8 @@ SOFTWARE.
 			perspective: false,
 			prevHtml: '<i class="far fa-arrow-alt-circle-left"></i>',
 			nextHtml: '<i class="far fa-arrow-alt-circle-right"></i>',
-			// onLoad: function () { },
-			// onSlideEnd: function () { }
+			onLoad: function () { },
+			onSlideEnd: function () { }
 		};
 
 	function Plugin(element, options) {

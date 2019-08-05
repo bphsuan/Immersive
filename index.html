@@ -11,17 +11,17 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/partialviewslider.css">
-  <link rel="stylesheet" href="./css/css-loader.css">
+  <!-- <link rel="stylesheet" href="./css/css-loader.css"> -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 
 <body>
-  <!-- Loader -->
-  <!-- <div class="se-pre-con"></div> -->
   <div class="loading">
     <img src="./assets/loading.gif">
   </div>
+  <audio id="bgMusic" src="./assets/Spirit_of_the_Dead.mp3" hidden=true loop=true controls autoplay></audio>
+
   <div class="container">
     <div class="header">
       <ul id="partial-view">
@@ -54,23 +54,23 @@
       <div class="menu">
         <a href="index.html"><img src="assets/Logo.png"></a>
         <ul>
-          <li class="big"><a href="#summary"><i class="fas fa-circle"></i>動機</a></li>
-          <li class="big"><a href="#section0"><i class="fas fa-circle"></i>環境危害議題</a></li>
-          <li class="small"><a href="#section1"><i class="fas fa-circle"></i>環境開發</a></li>
-          <li class="small"><a href="#section2"><i class="fas fa-circle"></i>霧霾</a></li>
-          <li class="small"><a href="#section3"><i class="fas fa-circle"></i>全球暖化</a></li>
-          <li class="small"><a href="#section4"><i class="fas fa-circle"></i>熱帶雨林</a></li>
-          <li class="small"><a href="#section5"><i class="fas fa-circle"></i>石油外洩</a></li>
-          <li class="small"><a href="#section6"><i class="fas fa-circle"></i>微型塑膠</a></li>
-          <li class="big"><a href="#section7"><i class="fas fa-circle"></i>現今做的努力</a></li>
-          <li class="small"><a href="#section8"><i class="fas fa-circle"></i>珊瑚50</a></li>
-          <li class="small"><a href="#section9"><i class="fas fa-circle"></i>歐盟新塑膠回收政策</a></li>
-          <li class="small"><a href="#section10"><i class="fas fa-circle"></i>蒙特婁議定書</a></li>
-          <li class="small"><a href="#section11"><i class="fas fa-circle"></i>國際淨灘行動ICC</a></li>
-          <li class="small"><a href="#section12"><i class="fas fa-circle"></i>全國空氣質量行動計劃</a></li>
-          <li class="small"><a href="#section13"><i class="fas fa-circle"></i>我們可以做些什麼呢？</a></li>
-          <li class="big"><a href="#section14"><i class="fas fa-circle"></i>關於我們</a></li>
-          <li class="big"><a href="#section15"><i class="fas fa-circle"></i>資料來源</a></li>
+          <li class="big"><a href="#summary"><i class="fas fa-angle-double-right"></i>動機</a></li>
+          <li class="big"><a href="#section0"><i class="fas fa-angle-double-right"></i>環境危害議題</a></li>
+          <li class="small"><a href="#section1"><i class="fas fa-angle-right"></i>環境開發</a></li>
+          <li class="small"><a href="#section2"><i class="fas fa-angle-right"></i>霧霾</a></li>
+          <li class="small"><a href="#section3"><i class="fas fa-angle-right"></i>全球暖化</a></li>
+          <li class="small"><a href="#section4"><i class="fas fa-angle-right"></i>熱帶雨林</a></li>
+          <li class="small"><a href="#section5"><i class="fas fa-angle-right"></i>石油外洩</a></li>
+          <li class="small"><a href="#section6"><i class="fas fa-angle-right"></i>微型塑膠</a></li>
+          <li class="big"><a href="#section7"><i class="fas fa-angle-double-right"></i>現今做的努力</a></li>
+          <li class="small"><a href="#section8"><i class="fas fa-angle-right"></i>珊瑚50</a></li>
+          <li class="small"><a href="#section9"><i class="fas fa-angle-right"></i>歐盟新塑膠回收政策</a></li>
+          <li class="small"><a href="#section10"><i class="fas fa-angle-right"></i>蒙特婁議定書</a></li>
+          <li class="small"><a href="#section11"><i class="fas fa-angle-right"></i>國際淨灘行動ICC</a></li>
+          <li class="small"><a href="#section12"><i class="fas fa-angle-right"></i>全國空氣質量行動計劃</a></li>
+          <li class="small"><a href="#section13"><i class="fas fa-angle-right"></i>我們可以做些什麼呢？</a></li>
+          <li class="big"><a href="#section14"><i class="fas fa-angle-double-right"></i>關於我們</a></li>
+          <li class="big"><a href="#section15"><i class="fas fa-angle-double-right"></i>資料來源</a></li>
         </ul>
       </div>
       <div class="rwdMenu">
@@ -101,6 +101,8 @@
         <a id="summary"></a>
         <div class="summary">
           <div class="box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gMsXhjsbo_g" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <a class="section" id="section0"></a>
@@ -111,7 +113,7 @@
         <div class="topic_section">
           <a class="section" id="section1"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/turtle.svg);">
+            <div class="t_pic" style="background-image: url(./assets/turtle.svg);">
             </div>
           </div>
           <div class="topic_content">
@@ -138,7 +140,7 @@
         <div class="topic_section">
           <a class="section" id="section2"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/city.svg);">
+            <div class="t_pic" style="background-image: url(./assets/city.svg);">
             </div>
           </div>
           <div class="topic_content">
@@ -169,7 +171,7 @@
         <div class="topic_section">
           <a class="section" id="section3"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/coral.svg);">
+            <div class="t_pic" style="background-image: url(./assets/coral.svg);">
             </div>
           </div>
           <div class="topic_content">
@@ -196,7 +198,7 @@
         <div class="topic_section">
           <a class="section" id="section4"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/rainforest.svg);">
+            <div class="t_pic" style="background-image: url(./assets/rainforest.svg);">
             </div>
           </div>
           <div class="topic_content">
@@ -211,7 +213,7 @@
               棲地。而原始熱帶雨林只要受到砍伐，就無法恢復原本的狀態。
             </p>
             <a href="https://news.ltn.com.tw/news/world/breakingnews/2770759" class="topic_btn"
-              id="rainforest_btn">新聞來源</a>
+              id="rainforest_btn">新聞來源</audio>
           </div>
           <div class="topic_conclusion" id="rainforest_conclusion">
             <div class="conclusion">
@@ -228,7 +230,7 @@
         <div class="topic_section">
           <a class="section" id="section5"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/cruise.svg);">
+            <div class="t_pic" style="background-image: url(./assets/cruise.svg);">
             </div>
           </div>
           <div class="topic_content">
@@ -259,7 +261,7 @@
         <div class="topic_section">
           <a class="section" id="section6"></a>
           <div class="topic_pic">
-            <div class="t_pic" style="background-image: url(../assets/plastic.svg);">
+            <div class="t_pic" style="background-image: url(./assets/plastic.svg);">
               <!-- <img src="./assets/plastic.svg" /> -->
             </div>
           </div>
@@ -671,11 +673,11 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/slider.js"></script>
-  <script type="text/javascript" src="js/menu.js"></script>
-  <script type="text/javascript" src="js/carousel.js"></script>
-  <script type="text/javascript" src="js/partialviewslider.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <!-- <script type="text/javascript" src="./js/slider.js"></script> -->
+  <script type="text/javascript" src="./js/menu.js"></script>
+  <!-- <script type="text/javascript" src="./js/carousel.js"></script> -->
+  <script type="text/javascript" src="./js/partialviewslider.js"></script>
 
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->

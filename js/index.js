@@ -3,7 +3,12 @@ $(document).ready(function () {
   dataToggle();
   window.onload = function () {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
+    $('#bgMusic').animate({ volume: 0.5 }, 1000, function () {
+      $('#bgMusic')[0].play();
+      $('#bgMusic')[0].volume = 0.5;
+    });
   }
+
   var partialView = $('#partial-view').partialViewSlider();
 
   $('#prev').on('click', function () {
@@ -18,6 +23,7 @@ $(document).ready(function () {
   $('#pause').on('click', function () {
     partialView.pause();
   });
+
 });
 function dataToggle() {
   $(".dataApear").click(function () {

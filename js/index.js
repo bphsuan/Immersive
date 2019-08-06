@@ -1,14 +1,35 @@
-// var jsImg = new Array("./assets/turtle02.jpg", "./assets/turtle01.jpg", "./assets/turtle03.png", "./assets/turtle04.png");
-// var jsImg_len = jsImg.length;
-// var i = 0;
-window.onload = function () {
-  $('html,body').animate({ scrollTop: 0 }, 'slow');
-}
+$(document).ready(function () {
+  $(".loading").delay("slow").fadeOut("slow");
+  dataToggle();
+  window.onload = function () {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+  }
+  var partialView = $('#partial-view').partialViewSlider();
 
-// setInterval("turtleImg()", 1500);
-// function turtleImg() {
-//   document.getElementById("turtlePic").innerHTML = "<img src='" + jsImg[i] + "' width=100%'>";
-//   $("#turtlePic img").fadeIn(1000);
-//   i++;
-//   if (i >= jsImg_len) i = 0;
-// }
+  $('#prev').on('click', function () {
+    partialView.prev();
+  });
+  $('#next').on('click', function () {
+    partialView.next();
+  });
+  $('#play').on('click', function () {
+    partialView.play();
+  });
+  $('#pause').on('click', function () {
+    partialView.pause();
+  });
+});
+function dataToggle() {
+  $(".dataApear").click(function () {
+    $(".dataHide").css("display", "block");
+    $(".dataApear").css("display", "none");
+    $(".dataDispear").css("display", "block");
+    console.log("apear");
+  })
+  $(".dataDispear").click(function () {
+    $(".dataHide").css("display", "none");
+    $(".dataDispear").css("display", "none");
+    $(".dataApear").css("display", "block");
+    console.log("dispear");
+  })
+}

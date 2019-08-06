@@ -14,7 +14,7 @@ function setMenu() {
     if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
       $('#bgMusic')[0].pause();
     }
-    if ($(document).scrollTop() > def_restart_bgmusic) {
+    if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
       $('#bgMusic')[0].play();
       // $("#youtube_video")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     }

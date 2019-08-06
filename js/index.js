@@ -3,9 +3,9 @@ $(document).ready(function () {
   dataToggle();
   window.onload = function () {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
-    $('#bgMusic').animate({ volume: 0.2 }, 1000, function () {
+    $('#bgMusic').animate({ volume: 0.3 }, 1000, function () {
       $('#bgMusic')[0].play();
-      $('#bgMusic')[0].volume = 0.2;
+      $('#bgMusic')[0].volume = 0.3;
     });
   }
 

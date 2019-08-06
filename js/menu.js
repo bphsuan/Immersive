@@ -2,9 +2,7 @@ $(document).ready(function () {
   menuToggle();
   windowResize();
   setMenu();
-  $('#bgMusic').animate({ volume: 1 }, 1000, function () {
-    $('#bgMusic')[0].play();
-  });
+
 });
 function setMenu() {
   var def_menu = $(".menu").offset().top;

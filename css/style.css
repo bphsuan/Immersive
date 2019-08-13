@@ -75,10 +75,12 @@
         animation: earth-Rotate 5s infinite linear; }
         @media screen and (max-width: 1024px) {
           .container .header .earth embed {
-            margin: 280px 0px 0px 0px; } }
+            width: 70%;
+            margin: 280px 15% 0px 15%; } }
         @media screen and (max-width: 500px) {
           .container .header .earth embed {
-            margin: 200px 0px 0px 0px; } }
+            width: 90%;
+            margin: 200px 5% 0px 5%; } }
       .container .header .earth .start {
         margin-top: 25px;
         text-align: center;
@@ -285,14 +287,27 @@
       width: 90%; }
       .container .topic .summary .box {
         width: 100%;
-        height: 400px;
         position: relative; }
         .container .topic .summary .box iframe {
+          width: 560px;
+          height: 315px;
           clear: both;
           margin: 20px auto;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex; }
+          @media screen and (max-width: 600px) {
+            .container .topic .summary .box iframe {
+              width: 392px;
+              height: 220.59px; } }
+          @media screen and (max-width: 450px) {
+            .container .topic .summary .box iframe {
+              width: 336px;
+              height: 189px; } }
+          @media screen and (max-width: 360px) {
+            .container .topic .summary .box iframe {
+              width: 280px;
+              height: 157.5px; } }
         .container .topic .summary .box .list {
           width: 100%;
           height: 400px;
@@ -554,7 +569,8 @@
             font-size: 18px;
             line-height: 2;
             text-align: justify;
-            text-justify: distribute; }
+            text-justify: distribute;
+            opacity: 0; }
       .container .topic .topic_section #turtle_conclusion {
         background: -webkit-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);
         background: -o-linear-gradient(35deg, #e7c85a 24%, #9d6c0a 81%);

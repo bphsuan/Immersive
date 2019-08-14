@@ -66,8 +66,8 @@
           .container .header .earth div {
             width: 60%; } }
       .container .header .earth embed {
-        margin: 170px 0px 0px 0px;
-        width: 100%;
+        margin: 170px 5% 0px 5%;
+        width: 90%;
         height: auto;
         -webkit-animation: earth-Rotate 5s infinite linear;
         -moz-animation: earth-Rotate 5s infinite linear;

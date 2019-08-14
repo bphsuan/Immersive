@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".loading").delay("slow").fadeOut("slow");
+  $(".loading").delay("2500").fadeOut("slow");
   dataToggle();
   window.onload = function () {
     $('html,body').animate({ scrollTop: 0 }, 'slow');

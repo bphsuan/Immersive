@@ -73,6 +73,17 @@ $transition: all 0.5s;
     height: auto;
     margin: auto;
   }
+  span {
+    width: 100%;
+    font-size: $fontSize-text;
+    font-weight: bold;
+    position: fixed;
+    top: 70%;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #222;
+  }
 }
 .container {
   width: 100%;
@@ -273,6 +284,22 @@ $transition: all 0.5s;
           display: block;
         }
       }
+      ul {
+        li {
+          a {
+            .big {
+              i {
+                font-size: $fontSize-subtitle * 0.9;
+              }
+            }
+            .small {
+              i {
+                font-size: $fontSize-text;
+              }
+            }
+          }
+        }
+      }
     }
     .hamburger1 {
       width: 45px;
@@ -354,7 +381,7 @@ $transition: all 0.5s;
           margin-right: 15px;
           font-size: $fontSize-text * 0.9;
         }
-        @media screen and(max-width:360px) {
+        @media screen and(max-width:450px) {
           & {
             font-size: $fontSize-subtitle * 0.8;
             margin-top: 6px;
@@ -373,7 +400,7 @@ $transition: all 0.5s;
           margin-right: 15px;
           font-size: $fontSize-text * 0.5;
         }
-        @media screen and(max-width:360px) {
+        @media screen and(max-width:450px) {
           & {
             font-size: $fontSize-text * 0.85;
             margin-top: 6px;

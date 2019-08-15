@@ -123,7 +123,6 @@ function windowResize() {
   var def_menu = $(".menu").offset().top;
   $(window).resize(function () {
     var windowWidth = $(window).width();
-    console.log(windowWidth);
     if (windowWidth > 1080) {
       $(".hamburger1").css("display", "none");
       $(".hamburger2").css("display", "none");

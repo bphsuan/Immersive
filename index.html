@@ -41,11 +41,14 @@
       var begin_bgmusic = $('.header').height();
       var def_restart_bgmusic = $('.header').height() + $('.summary').height();
       $(window).scroll(function () {
+        $('#bgMusic')[0].play();
         if ($(document).scrollTop() != undefined) {
           if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
+            $('#bgMusic')[0].pause();
             player.playVideo();
           }
           else if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
+            $('#bgMusic')[0].play();
             player.pauseVideo();
           }
         }

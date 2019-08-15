@@ -9,8 +9,9 @@ $(document).ready(function () {
   }
   
   $('#logo_refresh').on('click', function () {
-    $('html,body').animate({ scrollTop: 0 }, 'slow');
+    $('html,body').animate({ scrollTop: 0 }, 1500);
   });
+
   var partialView = $('#partial-view').partialViewSlider();
 
   $('#prev').on('click', function () {

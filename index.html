@@ -11,8 +11,50 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/partialviewslider.css">
-  <!-- <link rel="stylesheet" href="./css/css-loader.css"> -->
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script async src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    function onYouTubeIframeAPIReady() {
+      var player;
+      player = new YT.Player('muteYouTubeVideoPlayer', {
+        videoId: 'WfGMYdalClU', // YouTube 影片 ID
+        width: 650, // 播放器寬度 (in px)
+        height: 356, // 播放器長度 (in px)
+        playerVars: {
+          autoplay: 0, // 自動播放視頻
+          controls: 1, // 顯示播放/暫停按鈕
+          showinfo: 0, // 隱藏影片標題
+          modestbranding: 1, // 隱藏YouTube LOGO
+          loop: 1, // 循環播放
+          fs: 0, // 隱藏全螢幕視窗按鈕
+          cc_load_policty: 0, // 隱藏關閉字幕
+          iv_load_policy: 3, // 隱藏影片註釋
+          autohide: 0 // 播放時隱藏影片控制按鈕
+        },
+        events: {
+          onReady: function (e) {
+            // e.target.mute(); // 靜音
+          }
+        }
+      });
+      var begin_bgmusic = $('.header').height();
+      var def_restart_bgmusic = $('.header').height() + $('.summary').height();
+      $(window).scroll(function () {
+        if ($(document).scrollTop() != undefined) {
+          if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
+            player.playVideo();
+          }
+          else if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
+            player.pauseVideo();
+          }
+        }
+      })
+    }
+        // Written by @labnol
+
+
+  </script>
 </head>
 
 
@@ -103,8 +145,9 @@
         <a id="summary"></a>
         <div class="summary">
           <div class="box">
-            <iframe src="https://www.youtube.com/embed/WfGMYdalClU?controls=0" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="muteYouTubeVideoPlayer"></div>
+            <!-- <iframe src="https://www.youtube.com/embed/WfGMYdalClU?controls=0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
           </div>
         </div>
         <a class="section" id="section0"></a>
@@ -684,18 +727,10 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
   <script type="text/javascript" src="./js/index.js"></script>
-  <!-- <script type="text/javascript" src="./js/slider.js"></script> -->
   <script type="text/javascript" src="./js/menu.js"></script>
-  <!-- <script type="text/javascript" src="./js/carousel.js"></script> -->
   <script type="text/javascript" src="./js/partialviewslider.js"></script>
-
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
-  <script>
-
-  </script>
 </body>
 
 </html>

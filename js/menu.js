@@ -10,7 +10,7 @@ function setMenu() {
   var scroll = false;
 
   $(window).scroll(function () {
-    
+
     //往下滑動後固定左側menu
     if (document.documentElement.scrollTop >= def_menu) {
       if (!scroll) {
@@ -173,19 +173,19 @@ $(function () {
   });
 });
 //Menu點擊變色動畫
-$(".menu ul li a").click(function () {
-  $(".menu ul li a").css({ "color": "#9d9d9d" });
-  $(this).css({
-    "color": "#343434", "animation": "color 2s",
-    "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
-  }).siblings().css({ "color": "#9d9d9d" });
-});
+// $(".menu ul li a").click(function () {
+//   $(".menu ul li a").css({ "color": "#9d9d9d" });
+//   $(this).css({
+//     "color": "#343434", "animation": "color 2s",
+//     "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
+//   }).siblings().css({ "color": "#9d9d9d" });
+// });
 
-$(".rwdMenu ul li a").click(function () {
-  $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
-  $(this).css({
-    "color": "#343434", "animation": "color 2s",
-    "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
-  }).siblings().css({ "color": "#9d9d9d" });
-});
+// $(".rwdMenu ul li a").click(function () {
+//   $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
+//   $(this).css({
+//     "color": "#343434", "animation": "color 2s",
+//     "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
+//   }).siblings().css({ "color": "#9d9d9d" });
+// });
 

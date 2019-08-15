@@ -10,13 +10,17 @@ function setMenu() {
   var scroll = false;
 
   $(window).scroll(function () {
-    if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
+    $('#bgMusic')[0].play();
+    if($(document).scrollTop()!=undefined){
+      if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
       $('#bgMusic')[0].pause();
     }
-    if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
+    else if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
       $('#bgMusic')[0].play();
       // $("#youtube_video")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     }
+    }
+    
     //往下滑動後固定左側menu
     if (document.documentElement.scrollTop >= def_menu) {
       if (!scroll) {

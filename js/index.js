@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  var player = document.getElementById('bgMusic');
+
+  player.addEventListener('canplaythrough', function () {
+    player.play();
+  }, false);
   $(".loading").delay("2500").fadeOut("slow");
   dataToggle();
   window.onload = function () {
@@ -7,7 +12,7 @@ $(document).ready(function () {
       $('#bgMusic')[0].play();
     }
   }
-  
+
   $('#logo_refresh').on('click', function () {
     $('html,body').animate({ scrollTop: 0 }, 1500);
   });

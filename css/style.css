@@ -111,7 +111,7 @@
     .container .content .menu {
       width: 17%;
       height: 100vh;
-      padding: 20px 1.5%;
+      padding: 15px 1.5%;
       float: left;
       line-height: 1.5;
       -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -126,7 +126,7 @@
       @media screen and (max-width: 1200px) {
         .container .content .menu {
           width: 18%;
-          padding: 20px 1%; } }
+          padding: 15px 1%; } }
 
 @media screen and (max-width: 1200px) and (max-height: 850px) {
   .container .content .menu {
@@ -888,10 +888,11 @@
         padding: 30px;
         line-height: 2;
         background-color: white; }
-        .container .topic .effort .effort_content p {
+        .container .topic .effort .effort_content .effort_text {
           font-size: 18px;
           text-align: justify;
-          text-justify: distribute; }
+          text-justify: distribute;
+          opacity: 0; }
         .container .topic .effort .effort_content .scene {
           width: 120px;
           height: 80px;

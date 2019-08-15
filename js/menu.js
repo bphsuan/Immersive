@@ -47,6 +47,19 @@ function setMenu() {
         });
         $(this).animate({ 'opacity': '1' }, 1500);
       }
+      if (bottom_of_window > bottom_of_object) {
+        $('.rwdMenu ul li a').each(function (i) {
+          var position = $(this).attr('href');
+          if (document.documentElement.scrollTop >= $(position).offset().top) {
+            $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
+            $(this).css({
+              "color": "#343434", "animation": "color 1s",
+              "-moz-animation": "color 1s", "-webkit-animation": "color 1s"
+            }).siblings().css({ "color": "#9d9d9d" });
+          }
+        });
+        $(this).animate({ 'opacity': '1' }, 1500);
+      }
     });
     $('.conclusion_content').each(function (i) {
       var bottom_of_object = $(this).offset().top + 10;
@@ -65,17 +78,72 @@ function setMenu() {
         });
         $(this).animate({ 'opacity': '1' }, 1800);
       }
+      if (bottom_of_window > bottom_of_object) {
+        $('.rwdMenu ul li a').each(function (i) {
+          var position = $(this).attr('href');
+          if (document.documentElement.scrollTop >= $(position).offset().top) {
+            $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
+            $(this).css({
+              "color": "#343434", "animation": "color 1s",
+              "-moz-animation": "color 1s", "-webkit-animation": "color 1s"
+            }).siblings().css({ "color": "#9d9d9d" });
+          }
+        });
+        $(this).animate({ 'opacity': '1' }, 1500);
+      }
+    });
+    $('.effort_content .effort_text').each(function (i) {
+      var bottom_of_object = $(this).offset().top + 10;
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      /* If the object is completely visible in the window, fade it it */
+      if (bottom_of_window > bottom_of_object) {
+        $('.menu ul li a').each(function (i) {
+          var position = $(this).attr('href');
+          if (document.documentElement.scrollTop >= $(position).offset().top) {
+            $(".menu ul li a").css({ "color": "#9d9d9d" });
+            $(this).css({
+              "color": "#343434", "animation": "color 1s",
+              "-moz-animation": "color 1s", "-webkit-animation": "color 1s"
+            }).siblings().css({ "color": "#9d9d9d" });
+          }
+        });
+        $(this).animate({ 'opacity': '1' }, 1500);
+      }
+      if (bottom_of_window > bottom_of_object) {
+        $('.rwdMenu ul li a').each(function (i) {
+          var position = $(this).attr('href');
+          if (document.documentElement.scrollTop >= $(position).offset().top) {
+            $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
+            $(this).css({
+              "color": "#343434", "animation": "color 1s",
+              "-moz-animation": "color 1s", "-webkit-animation": "color 1s"
+            }).siblings().css({ "color": "#9d9d9d" });
+          }
+        });
+        $(this).animate({ 'opacity': '1' }, 1500);
+      }
     });
   });
 }
 function windowResize() {
+  var def_menu = $(".menu").offset().top;
   $(window).resize(function () {
     var windowWidth = $(window).width();
     console.log(windowWidth);
     if (windowWidth > 1080) {
       $(".hamburger1").css("display", "none");
       $(".hamburger2").css("display", "none");
-      // setMenu();
+      if (document.documentElement.scrollTop >= def_menu) {
+        if (!scroll) {
+          $(".menu").css({ "position": "fixed", "top": "0px" });
+          scroll = true;
+        }
+      } else if (document.documentElement.scrollTop < def_menu) {
+        if (scroll) {
+          $(".menu").css({ "position": "relative" });
+          scroll = false;
+        }
+      }
     }
     else {
       $(".hamburger1").css("display", "block");
@@ -119,6 +187,7 @@ $(".menu ul li a").click(function () {
     "-moz-animation": "color 2s", "-webkit-animation": "color 2s"
   }).siblings().css({ "color": "#9d9d9d" });
 });
+
 $(".rwdMenu ul li a").click(function () {
   $(".rwdMenu ul li a").css({ "color": "#9d9d9d" });
   $(this).css({

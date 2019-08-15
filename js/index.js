@@ -3,8 +3,14 @@ $(document).ready(function () {
   dataToggle();
   window.onload = function () {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
+    if ($(document).scrollTop() !== undefined) {
+      $('#bgMusic')[0].play();
+    }
   }
-
+  
+  $('#logo_refresh').on('click', function () {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+  });
   var partialView = $('#partial-view').partialViewSlider();
 
   $('#prev').on('click', function () {

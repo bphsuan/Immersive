@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />
   <title>Immersive 身臨其境</title>
   <link rel="shortcut icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -42,7 +45,6 @@
       var def_restart_bgmusic = $('.header').height() + $('.summary').height();
       $(window).scroll(function () {
         if ($(document).scrollTop() !== undefined) {
-          $('#bgMusic')[0].play();
           if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
             $('#bgMusic')[0].pause();
             player.playVideo();
@@ -66,8 +68,8 @@
     <img src="./assets/loading.gif">
     <span>身臨其境，『聲』臨其境<br />建議請開啟聲音<i class="fas fa-volume-up"></i>觀看。</span>
   </div>
-  <audio id="bgMusic" src="./assets/cinematic-emotional-background-music.mp3" hidden=true loop=true controls
-    autoplay></audio>
+  <audio id="bgMusic" src="./assets/cinematic-emotional-background-music.mp3" preload="auto" hidden=true
+    loop=true></audio>
 
   <div class="container">
     <div class="header">
@@ -99,7 +101,7 @@
     </div>
     <div class="content">
       <div class="menu">
-        <a href="index.html"><img src="assets/Logo.png"></a>
+        <a id="logo_refresh"><img src="assets/Logo.png"></a>
         <ul>
           <li class="big"><a href="#summary"><i class="fas fa-angle-double-right"></i>動機</a></li>
           <li class="big"><a href="#section0"><i class="fas fa-angle-double-right"></i>環境危害議題</a></li>

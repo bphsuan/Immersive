@@ -135,6 +135,8 @@
         width: 100%;
         height: auto;
         margin: 5px 0; }
+        .container .content .menu img:hover {
+          cursor: pointer; }
       .container .content .menu ul {
         font-weight: 500; }
         .container .content .menu ul a {

@@ -48,6 +48,7 @@
           if ($(document).scrollTop() >= begin_bgmusic && $(document).scrollTop() <= def_restart_bgmusic && $(document).scrollTop() != 0) {
             $('#bgMusic')[0].pause();
             player.playVideo();
+            
           }
           else if ($(document).scrollTop() < begin_bgmusic || $(document).scrollTop() > def_restart_bgmusic) {
             $('#bgMusic')[0].play();

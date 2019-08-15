@@ -2,7 +2,7 @@ $(document).ready(function () {
   $(".loading").delay("2500").fadeOut("slow");
   dataToggle();
   window.onload = function () {
-    $('html,body').animate({ scrollTop: 0 }, 'slow');
+    $('html,body').animate({ scrollTop: 0 }, 1500);
     if ($(document).scrollTop() !== undefined) {
       $('#bgMusic')[0].play();
     }

@@ -35,7 +35,6 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p> -->
-![image](https://github.com/bphsuan/Immersive/blob/master/assets/earth.svg)
 <h1 align="center" >
   Immersive 身臨其境
 </h1>

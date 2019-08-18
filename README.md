@@ -35,8 +35,8 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p> -->
+![image](https://github.com/bphsuan/Immersive/blob/master/assets/earth.svg)
 <h1 align="center" >
-  ![image](https://github.com/bphsuan/Immersive/blob/master/assets/earth.svg)
   Immersive 身臨其境
 </h1>
 
@@ -51,5 +51,5 @@
     ```sh
     cd Immersive/
     ```
-    And develop **index.html** to start it up.
+    And click **index.html** to start it up.
 

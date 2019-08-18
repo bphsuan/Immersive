@@ -35,8 +35,8 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p> -->
-<h1 align="center">
-  Immersive 身臨其境
+<h1 align="center" >
+  ![image](https://github.com/bphsuan/Immersive/blob/master/assets/Logo.png)Immersive 身臨其境
 </h1>
 
 
@@ -52,8 +52,3 @@
     ```
     And develop **index.html** to start it up.
 
-1.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data.

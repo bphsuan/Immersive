@@ -36,7 +36,8 @@
   </a>
 </p> -->
 <h1 align="center" >
-  ![image](https://github.com/bphsuan/Immersive/blob/master/assets/Logo.png)Immersive 身臨其境
+  ![image](https://github.com/bphsuan/Immersive/blob/master/assets/earth.svg)
+  Immersive 身臨其境
 </h1>
 
 
